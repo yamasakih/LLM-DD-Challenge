@@ -1,0 +1,66 @@
+{
+    "docking": {
+        "header": {
+            "logging": {
+                "logfile": "/workspace/Auto-GPT/tutorial/ADV_docking.log"
+            }
+        },
+        "ligand_preparation": {
+            "embedding_pools": [
+                {
+                    "pool_id": "RDkit",
+                    "type": "RDkit",
+                    "parameters": {
+                        "prefix_execution": ""
+                    },
+                    "input": {
+                        "standardize_smiles": false,
+                        "type": "console"
+                    },
+                    "output": {
+                        "conformer_path": "/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf",
+                        "format": "sdf"
+                    }
+                }
+            ]
+        },
+        "docking_runs": [
+            {
+                "backend": "AutoDockVina",
+                "run_id": "AutoDockVina",
+                "input_pools": [
+                    "RDkit"
+                ],
+                "parameters": {
+                    "binary_location": "/home/vscode/micromamba/envs/DockStream/bin/",
+                    "parallelization": {
+                        "number_cores": 6
+                    },
+                    "seed": 42,
+                    "receptor_pdbqt_path": [
+                        "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/8gcy_receptor.pdbqt"
+                    ],
+                    "number_poses": 10,
+                    "search_space": {
+                        "--center_x": 2.21,
+                        "--center_y": 8.41,
+                        "--center_z": 18.57,
+                        "--size_x": 14,
+                        "--size_y": 9,
+                        "--size_z": 10
+                    }
+                },
+                "output": {
+                    "poses": {
+                        "poses_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_ligands_docked.sdf",
+                        "overwrite": false
+                    },
+                    "scores": {
+                        "scores_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_scores.csv",
+                        "overwrite": false
+                    }
+                }
+            }
+        ]
+    }
+}

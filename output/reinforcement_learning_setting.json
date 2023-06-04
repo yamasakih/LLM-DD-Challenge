@@ -1,0 +1,64 @@
+{
+    "logging": {
+        "job_id": "demo",
+        "job_name": "Reinforcement learning demo",
+        "logging_frequency": 5,
+        "logging_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log",
+        "recipient": "local",
+        "result_folder": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results",
+        "sender": "http://0.0.0.1"
+    },
+    "parameters": {
+        "diversity_filter": {
+            "minscore": 0.4,
+            "minsimilarity": 0.4,
+            "name": "IdenticalMurckoScaffold",
+            "nbmax": 25
+        },
+        "inception": {
+            "memory_size": 100,
+            "sample_size": 10,
+            "smiles": [
+                "C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1",
+                "Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1",
+                "C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1"
+            ]
+        },
+        "reinforcement_learning": {
+            "prior": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new",
+            "agent": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new",
+            "n_steps": 50,
+            "sigma": 128,
+            "learning_rate": 0.0001,
+            "reset": 0,
+            "reset_score_cutoff": 0.5,
+            "batch_size": 16,
+            "margin_threshold": 50
+        },
+        "scoring_function": {
+            "name": "custom_sum",
+            "parallel": false,
+            "parameters": [
+                {
+                    "component_type": "dockstream",
+                    "name": "dockstream",
+                    "weight": 1,
+                    "specific_parameters": {
+                        "configuration_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json",
+                        "docker_script_path": "/workspace/Auto-GPT/DockStream/docker.py",
+                        "environment_path": "/home/vscode/micromamba/envs/DockStream/bin/python3",
+                        "transformation": {
+                            "transformation_type": "reverse_sigmoid",
+                            "high": -5,
+                            "k": 0.25,
+                            "low": -12
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "run_type": "reinforcement_learning",
+    "version": 3,
+    "model_type": "default"
+}

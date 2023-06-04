@@ -1,0 +1,35 @@
+{
+    "target_preparation": {
+        "header": {
+            "logging": {
+                "logfile": "8gcy_target_prep.log"
+            }
+        },
+        "input_path": "8gcy_apo.pdb",
+        "fixer": {
+            "enabled": true,
+            "standardize": true,
+            "remove_heterogens": true,
+            "fix_missing_heavy_atoms": true,
+            "fix_missing_hydrogens": true,
+            "fix_missing_loops": false,
+            "add_water_box": false,
+            "fixed_pdb_path": "8gcy_fixed_target.pdb"
+        },
+        "runs": [
+            {
+                "backend": "AutoDockVina",
+                "output": {
+                    "receptor_path": "8gcy_receptor.pdbqt"
+                },
+                "parameters": {
+                    "pH": 7.4,
+                    "extract_box": {
+                        "reference_ligand_path": "Z3N.pdb",
+                        "reference_ligand_format": "PDB"
+                    }
+                }
+            }
+        ]
+    }
+}

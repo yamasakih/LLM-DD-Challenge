@@ -1,0 +1,13 @@
+2023-06-03 15:28:10 - DockStream version used: 1.0.0
+2023-06-03 15:28:11 - Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2023-06-03 15:28:18 - Started preparation run number 0.
+2023-06-03 15:28:18 - In specify_cavity
+2023-06-03 15:28:19 - In _export_as_pdb2pdbqt
+2023-06-03 15:28:19 - In _export_as_pdb2pdbqt argument=['/tmp/tmp7p9jjwnm.pdb', '-opdbqt', '-O8gcy_receptor.pdbqt', '-xr', '-p', 7.4, '--partialcharge', 'gasteiger']
+2023-06-03 15:28:24 - Ligand from file Z3N.pdb has the following dimensions:
+X coordinates: min=-4.67, max=8.59, mean=2.21
+Y coordinates: min=4.02, max=12.84, mean=8.41
+Z coordinates: min=13.81, max=23.18, mean=18.57
+2023-06-03 15:28:24 - In elif AUTODOCKVINA
+2023-06-03 15:28:24 - Wrote AutoDock Vina target to file 8gcy_receptor.pdbqt.
+2023-06-03 15:28:24 - Completed target preparation run number 0.
