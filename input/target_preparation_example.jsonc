@@ -1,0 +1,35 @@
+{
+    "target_preparation": {
+        "header": { // general settings
+            "logging": { // logging settings (e.g. which file to write to)
+                "logfile": "/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log"
+            }
+        },
+        "input_path": "/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb", // file path for apo (not including ligand compound) protein pdb
+        "fixer": { // based on "PDBFixer"; tries to fix common problems with PDB files
+            "enabled": true,
+            "standardize": true, // enables standardization of residues 
+            "remove_heterogens": true, // remove hetero-entries
+            "fix_missing_heavy_atoms": true, // if possible, fix missing heavy atoms
+            "fix_missing_hydrogens": true, // add hydrogens, which are usually not present in PDB files
+            "fix_missing_loops": false, // add missing loops; CAUTION: the result is usually not sufficient
+            "add_water_box": false, // if you want to put the receptor into a box of water molecules
+            "fixed_pdb_path": "/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb" // if specified and not "None", the fixed PDB file will be stored here
+        },
+        "runs": [ // "runs" holds a list of backend runs; at least one is required
+            {
+                "backend": "AutoDockVina", // one of the backends supported ("AutoDockVina", "OpenEye", ...)
+                "output": {
+                    "receptor_path": "/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt" // the generated receptor file will be saved to this location
+                },
+                "parameters": {
+                    "pH": 7.4, // # sets the protonation states (NOT used in Vina)
+                    "extract_box": { // in order to extract the coordinates of the pocket (see text)
+                        "reference_ligand_path": "/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb", // path to the reference ligand
+                        "reference_ligand_format": "PDB" // format of the reference ligand
+                    }
+                }
+            }
+        ]
+    }
+}

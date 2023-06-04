@@ -1,0 +1,60 @@
+{
+    "logging": {
+        "job_id": "demo", // only relevant if "recipient" is set to a specific REST endpoint
+        "job_name": "Reinforcement learning demo", // set an arbitrary job name for identification
+        "logging_frequency": 5, // log every x-th steps
+        "logging_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log", // load this folder in tensorboard
+        "recipient": "local", // either to local logging or use a remote REST-interface
+        "result_folder": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results", // will hold the compounds (SMILES) and summaries
+        "sender": "http://0.0.0.1" // only relevant if "recipient" is set to "remote"
+    },
+    "parameters": {
+        "diversity_filter": {
+            "minscore": 0.4, // the minimum total score to be considered for binning
+            "minsimilarity": 0.4, // the minimum similarity to be placed into the same bin
+            "name": "IdenticalMurckoScaffold", // other options are: "IdenticalTopologicalScaffold", "NoFilter" and "ScaffoldSimilarity" -> use "NoFilter" to disable this feature
+            "nbmax": 25 // the bin size; penalization will start once this is exceeded
+        },
+        "inception": {
+            "memory_size": 100, // sets how many molecules are to be remembered
+            "sample_size": 10, // how many are to be sampled each epoch from the memory
+            "smiles": [] // fill in a list of SMILES here that can be used (or leave empty)
+        },
+        "reinforcement_learning": {
+            "prior": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new", // fixed
+            "agent": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new", // fixed
+            "n_steps": 50, // the number of epochs (steps) to be performed; often 1000 (set to 2 in this notebook to decrease docking computation time - it is not expected that the agent will appreciably learn to generate compounds with good docking scores in only 2 epochs. The purpose of this notebook is to illustrate how DockStream  can be specified as a component to the `Scoring Function`)
+            "sigma": 128, // used to calculate the "augmented likelihood", see publication
+            "learning_rate": 0.0001, // sets how strongly the agent is influenced by each epoch
+            "reset": 0,
+            "reset_score_cutoff": 0.5,
+            "batch_size": 16, // specifies how many molecules are generated per epoch, often 128 docking becomes more computationally demanding the greater the batch size, as each compound must be docked. Depending on the docking configuration, embedding ligands may generate different  tautomers, ionization states, etc., which will increase the number of compounds that need to be docked. Batch size is set to 8 in  this notebook to decrease docking computation time and just for illustration)
+            "margin_threshold": 50 // specify the (positive) margin between agent and prior
+        },
+        "scoring_function": {
+            "name": "custom_sum",
+            "parallel": false, // sets whether components are to be executed in parallel; note, that python uses "False" / "True" but the JSON "false" / "true"
+            "parameters": [ //     # the "parameters" list holds the individual components
+                {
+                    "component_type": "dockstream", // use DockStream as a Scoring Function component      
+                    "name": "dockstream",
+                    "weight": 1,
+                    "specific_parameters": {
+                        "configuration_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_docking.json", // Update to your setting json created for docking
+                        "docker_script_path": "/workspace/Auto-GPT/DockStream/docker.py", // fixed
+                        "environment_path": "/home/vscode/micromamba/envs/DockStream/bin/python3", // fixed
+                        "transformation": {
+                            "transformation_type": "reverse_sigmoid", // lower AutoDock Vina scores are better - use reverse sigmoid transformation
+                            "high": -5, // Update to the maximum docking score of your ligand
+                            "k": 0.25,
+                            "low": -12 // Update to the minimum docking score of your ligand
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "run_type": "reinforcement_learning",
+    "version": 3,
+    "model_type": "default"
+}

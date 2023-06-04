@@ -1,0 +1,66 @@
+{
+    "docking": { // general settings
+        "header": {
+            "logging": { // logging settings (e.g. which file to write to)
+                "logfile": "/workspace/Auto-GPT/tutorial/ADV_docking.log"
+            }
+        },
+        "ligand_preparation": { // the ligand preparation part, defines how to build the pool
+            "embedding_pools": [
+                {
+                    "pool_id": "RDkit", // fixed
+                    "type": "RDkit", // fiexed
+                    "parameters": {
+                        "prefix_execution": "" // only required, if a module needs to be loaded to execute "Corina"
+                    },
+                    "input": {
+                        "standardize_smiles": false,
+                        "type": "console" // fixed
+                    },
+                    "output": { // the conformers can be written to a file, but "output" is not required as the ligands are forwarded internally
+                        "conformer_path": "/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf",
+                        "format": "sdf"
+                    }
+                }
+            ]
+        },
+        "docking_runs": [
+            {
+                "backend": "AutoDockVina",
+                "run_id": "AutoDockVina",
+                "input_pools": [
+                    "RDkit"
+                ],
+                "parameters": {
+                    "binary_location": "/home/vscode/micromamba/envs/DockStream/bin/", // fixed
+                    "parallelization": {
+                        "number_cores": 6 // fixed
+                    },
+                    "seed": 42, // use this "seed" to generate reproducible results; if varied, slightly different results will be produced
+                    "receptor_pdbqt_path": [
+                        "/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt" // target receptor PDBQT format file created by target protein preparation command
+                    ],
+                    "number_poses": 10, // number of poses to be generated
+                    "search_space": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file
+                        "--center_x": 0,
+                        "--center_y": 0,
+                        "--center_z": 0,
+                        "--size_x": 0,
+                        "--size_y": 0,
+                        "--size_z": 0
+                    }
+                },
+                "output": {
+                    "poses": {
+                        "poses_path": "/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf",
+                        "overwrite": false
+                    },
+                    "scores": {
+                        "scores_path": "/workspace/Auto-GPT/tutorial/ADV_scores.csv",
+                        "overwrite": false
+                    }
+                }
+            }
+        ]
+    }
+}
