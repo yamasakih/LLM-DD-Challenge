@@ -1,0 +1,356 @@
+2023-06-03 16:56:22,053 INFO GPT4 Only Mode:  ENABLED
+2023-06-03 16:56:22,229 INFO Using AI Settings File: ai_settings_230603_4.yaml
+2023-06-03 16:56:22,670 INFO NEWS: Welcome to Auto-GPT!
+2023-06-03 16:56:22,671 INFO NEWS: Below you'll find the latest Auto-GPT News and updates regarding features!
+2023-06-03 16:56:22,673 INFO NEWS: If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag.
+2023-06-03 16:56:22,675 INFO NEWS: 
+2023-06-03 16:56:22,677 INFO NEWS: Website and Documentation Site 📰📖
+2023-06-03 16:56:22,678 INFO NEWS: Check out https://agpt.co, the official news & updates site for Auto-GPT!
+2023-06-03 16:56:22,681 INFO NEWS: The documentation also has a place here, at https://docs.agpt.co
+2023-06-03 16:56:22,683 INFO NEWS: 
+2023-06-03 16:56:22,685 INFO NEWS: For contributors 👷🏼
+2023-06-03 16:56:22,687 INFO NEWS: Since releasing v0.3.0, we are working on re-architecting the Auto-GPT core to make
+2023-06-03 16:56:22,691 INFO NEWS: it more extensible and to make room for structural performance-oriented R&D.
+2023-06-03 16:56:22,693 INFO NEWS: In the meantime, we have less time to process incoming pull requests and issues,
+2023-06-03 16:56:22,695 INFO NEWS: so we focus on high-value contributions:
+2023-06-03 16:56:22,696 INFO NEWS:  * significant bugfixes
+2023-06-03 16:56:22,699 INFO NEWS:   major* improvements to existing functionality and/or docs (so no single-typo fixes)
+2023-06-03 16:56:22,701 INFO NEWS:  * contributions that help us with re-architecture and other roadmapped items
+2023-06-03 16:56:22,703 INFO NEWS: We have to be somewhat selective in order to keep making progress, but this does not
+2023-06-03 16:56:22,705 INFO NEWS: mean you can't contribute. Check out the contribution guide on our wiki:
+2023-06-03 16:56:22,708 INFO NEWS: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing
+2023-06-03 16:56:22,711 INFO NEWS: 
+2023-06-03 16:56:22,713 INFO NEWS: 🚀 v0.3.1 Release 🚀
+2023-06-03 16:56:22,716 INFO NEWS: Over a week and 47 pull requests have passed since v0.3.0, and we are happy to announce
+2023-06-03 16:56:22,718 INFO NEWS: the release of v0.3.1!
+2023-06-03 16:56:22,722 INFO NEWS: 
+2023-06-03 16:56:22,724 INFO NEWS: Highlights and notable changes since v0.2.2:
+2023-06-03 16:56:22,727 INFO NEWS: 
+2023-06-03 16:56:22,729 INFO NEWS: Changes to Docker configuration 🐋
+2023-06-03 16:56:22,731 INFO NEWS:   The workdir has been changed from /home/appuser to /app*.
+2023-06-03 16:56:22,734 INFO NEWS:     Be sure to update any volume mounts accordingly!
+2023-06-03 16:56:22,736 INFO NEWS:  * Docker-compose 1.29.0 is now required.
+2023-06-03 16:56:22,737 INFO NEWS: 
+2023-06-03 16:56:22,739 INFO NEWS: Logging 🧾
+2023-06-03 16:56:22,741 INFO NEWS:  * Log functionality has been improved for better understanding
+2023-06-03 16:56:22,743 INFO NEWS:     and easier summarization.
+2023-06-03 16:56:22,745 INFO NEWS:  * All LLM interactions are now logged to logs/DEBUG, to help with
+2023-06-03 16:56:22,747 INFO NEWS:     debugging and development.
+2023-06-03 16:56:22,748 INFO NEWS: 
+2023-06-03 16:56:22,751 INFO NEWS: Other
+2023-06-03 16:56:22,753 INFO NEWS:  * Edge browser is now supported by the `browse_website` command.
+2023-06-03 16:56:22,754 INFO NEWS:  * Sets of commands can now be disabled using DISABLED_COMMAND_CATEGORIES in .env.
+2023-06-03 16:56:22,756 INFO NEWS: 
+2023-06-03 16:56:22,759 INFO NEWS: ⚠️ Command `send_tweet` is REMOVED
+2023-06-03 16:56:22,761 INFO NEWS: Twitter functionality (and more) is now covered by plugins, see [Plugin support 🔌]
+2023-06-03 16:56:22,764 INFO NEWS: 
+2023-06-03 16:56:22,767 INFO NEWS: Plugin support 🔌
+2023-06-03 16:56:22,770 INFO NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities,
+2023-06-03 16:56:22,771 INFO NEWS: adding support for third-party services and more.
+2023-06-03 16:56:22,774 INFO NEWS: See https://github.com/Significant-Gravitas/Auto-GPT-Plugins for instructions and
+2023-06-03 16:56:22,776 INFO NEWS: available plugins. Specific plugins can be allowlisted/denylisted in .env.
+2023-06-03 16:56:22,778 INFO NEWS: 
+2023-06-03 16:56:22,781 INFO NEWS: Memory backend deprecation ⚠️
+2023-06-03 16:56:22,783 INFO NEWS: The Milvus, Pinecone and Weaviate memory backends were rendered incompatible
+2023-06-03 16:56:22,785 INFO NEWS: by work on the memory system, and have been removed in `master`. The Redis
+2023-06-03 16:56:22,787 INFO NEWS: memory store was also temporarily removed but we aim to merge a new implementation
+2023-06-03 16:56:22,790 INFO NEWS: before the next release.
+2023-06-03 16:56:22,794 INFO NEWS: Whether built-in support for the others will be added back in the future is subject to
+2023-06-03 16:56:22,798 INFO NEWS: discussion, feel free to pitch in: https://github.com/Significant-Gravitas/Auto-GPT/discussions/4280
+2023-06-03 16:56:22,802 INFO NEWS: 
+2023-06-03 16:56:22,805 INFO NEWS: Challenge Workflow 🏆
+2023-06-03 16:56:22,806 INFO NEWS: If you have been working on challenges... Thank You!
+2023-06-03 16:56:22,809 INFO NEWS: But to run the debugger challenge or other challenges using cassettes and VCR in docker, You will now need to `pip uninstall vcrpy` and `pip install -r requirements.txt` again.
+2023-06-03 16:56:22,814 INFO NEWS: This will install a new version of vcrpy that is compatible with running vcr in docker.
+2023-06-03 16:56:22,816 INFO NEWS: This workflow will be fixed as soon as the maintainer from VCRpy merges our changes.
+2023-06-03 16:56:22,819 INFO NEWS: 
+2023-06-03 16:56:26,129 INFO  
+Plugins found: 1
+--------------------
+2023-06-03 16:56:26,130 INFO  Auto-GPT-Chemoinformatics-plugin: 0.1.0 - This is the Auto-GPT chemoinformatics plugin.
+2023-06-03 16:56:26,242 INFO Name : Hoshino AI
+2023-06-03 16:56:26,403 INFO Role : Medicinal Chemist and Chemoinformatician
+2023-06-03 16:56:26,578 INFO Goals: ['Read reinforcement_learning_setting.jsonc to know how to output setting json.', 'Update the reinforcement_learning_setting.jsonc file to use `/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json` to configuration_path. Update the reinforcement_learning_setting.jsonc file to use "C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1", "Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1" and "C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1" SMILES keys to smiles. Output the file as reinforcement_learning_setting.json.', 'Shutdown when task is done.']
+2023-06-03 16:56:27,126 INFO API Budget: $3.0
+2023-06-03 16:56:27,240 INFO Hoshino AI has been created with the following details:
+2023-06-03 16:56:27,505 INFO Name: Hoshino AI
+2023-06-03 16:56:27,590 INFO Role: Medicinal Chemist and Chemoinformatician
+2023-06-03 16:56:27,763 INFO Goals: 
+2023-06-03 16:56:27,816 INFO - Read reinforcement_learning_setting.jsonc to know how to output setting json.
+2023-06-03 16:56:28,049 INFO - Update the reinforcement_learning_setting.jsonc file to use `/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json` to configuration_path. Update the reinforcement_learning_setting.jsonc file to use "C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1", "Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1" and "C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1" SMILES keys to smiles. Output the file as reinforcement_learning_setting.json.
+2023-06-03 16:56:28,586 INFO - Shutdown when task is done.
+2023-06-03 16:56:28,771 INFO Using memory of type: LocalCache
+2023-06-03 16:56:28,938 INFO Using Browser: chrome
+2023-06-03 16:56:29,089 DEBUG  []
+2023-06-03 16:56:29,524 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read reinforcement_learning_setting.jsonc to know how to output setting json.\n2. Update the reinforcement_learning_setting.jsonc file to use `/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json` to configuration_path. Update the reinforcement_learning_setting.jsonc file to use \"C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1\", \"Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1\" and \"C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1\" SMILES keys to smiles. Output the file as reinforcement_learning_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n26. run_reinvent_with_docking: \"Run reinvent with reinforcement learning setting json.\", args: \"setting_json\": \"<setting_json>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 16:56:29 2023"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $3.000\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 16:56:48,860 INFO  THOUGHTS: I need to read the reinforcement_learning_setting.jsonc file and update it with the required information.
+2023-06-03 16:56:49,278 INFO REASONING: The first step is to read the existing file and then update it with the new configuration path and SMILES keys.
+2023-06-03 16:56:49,761 INFO PLAN: 
+2023-06-03 16:56:49,827 INFO -  Read reinforcement_learning_setting.jsonc
+2023-06-03 16:56:49,915 INFO -  Update the file with the new configuration path and SMILES keys
+2023-06-03 16:56:50,218 INFO -  Output the updated file as reinforcement_learning_setting.json
+2023-06-03 16:56:50,431 INFO -  Shutdown when the task is done
+2023-06-03 16:56:50,697 INFO CRITICISM: None
+2023-06-03 16:56:50,802 DEBUG  {
+    "thoughts": {
+        "text": "I need to read the reinforcement_learning_setting.jsonc file and update it with the required information.",
+        "reasoning": "The first step is to read the existing file and then update it with the new configuration path and SMILES keys.",
+        "plan": "- Read reinforcement_learning_setting.jsonc\n- Update the file with the new configuration path and SMILES keys\n- Output the updated file as reinforcement_learning_setting.json\n- Shutdown when the task is done",
+        "criticism": "None",
+        "speak": "I will read the reinforcement_learning_setting.jsonc file, update it, and output the updated file as reinforcement_learning_setting.json."
+    },
+    "command": {
+        "name": "read_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/reinforcement_learning_setting.jsonc"
+        }
+    }
+}
+2023-06-03 16:56:50,807 INFO NEXT ACTION:  COMMAND = read_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/reinforcement_learning_setting.jsonc'}
+2023-06-03 16:56:51,065 INFO  Enter 'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands, 'n' to exit program, or enter feedback for ...
+2023-06-03 16:56:51,068 INFO  Asking user via keyboard...
+2023-06-03 16:56:57,300 WARNING  Invalid input format. Please enter 'y -n' where n is the number of continuous tasks.
+2023-06-03 16:56:57,301 INFO  Asking user via keyboard...
+2023-06-03 16:57:00,458 INFO -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-= 
+2023-06-03 16:57:00,688 INFO SYSTEM:  Command read_file returned: {
+    "logging": {
+        "job_id": "demo", // only relevant if "recipient" is set to a specific REST endpoint
+        "job_name": "Reinforcement learning demo", // set an arbitrary job name for identification
+        "logging_frequency": 5, // log every x-th steps
+        "logging_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log", // load this folder in tensorboard
+        "recipient": "local", // either to local logging or use a remote REST-interface
+        "result_folder": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results", // will hold the compounds (SMILES) and summaries
+        "sender": "http://0.0.0.1" // only relevant if "recipient" is set to "remote"
+    },
+    "parameters": {
+        "diversity_filter": {
+            "minscore": 0.4, // the minimum total score to be considered for binning
+            "minsimilarity": 0.4, // the minimum similarity to be placed into the same bin
+            "name": "IdenticalMurckoScaffold", // other options are: "IdenticalTopologicalScaffold", "NoFilter" and "ScaffoldSimilarity" -> use "NoFilter" to disable this feature
+            "nbmax": 25 // the bin size; penalization will start once this is exceeded
+        },
+        "inception": {
+            "memory_size": 100, // sets how many molecules are to be remembered
+            "sample_size": 10, // how many are to be sampled each epoch from the memory
+            "smiles": [] // fill in a list of SMILES here that can be used (or leave empty)
+        },
+        "reinforcement_learning": {
+            "prior": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new", // fixed
+            "agent": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new", // fixed
+            "n_steps": 50, // the number of epochs (steps) to be performed; often 1000 (set to 2 in this notebook to decrease docking computation time - it is not expected that the agent will appreciably learn to generate compounds with good docking scores in only 2 epochs. The purpose of this notebook is to illustrate how DockStream  can be specified as a component to the `Scoring Function`)
+            "sigma": 128, // used to calculate the "augmented likelihood", see publication
+            "learning_rate": 0.0001, // sets how strongly the agent is influenced by each epoch
+            "reset": 0,
+            "reset_score_cutoff": 0.5,
+            "batch_size": 16, // specifies how many molecules are generated per epoch, often 128 docking becomes more computationally demanding the greater the batch size, as each compound must be docked. Depending on the docking configuration, embedding ligands may generate different  tautomers, ionization states, etc., which will increase the number of compounds that need to be docked. Batch size is set to 8 in  this notebook to decrease docking computation time and just for illustration)
+            "margin_threshold": 50 // specify the (positive) margin between agent and prior
+        },
+        "scoring_function": {
+            "name": "custom_sum",
+            "parallel": false, // sets whether components are to be executed in parallel; note, that python uses "False" / "True" but the JSON "false" / "true"
+            "parameters": [ //     # the "parameters" list holds the individual components
+                {
+                    "component_type": "dockstream", // use DockStream as a Scoring Function component      
+                    "name": "dockstream",
+                    "weight": 1,
+                    "specific_parameters": {
+                        "configuration_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_docking.json", // Update to your setting json created for docking
+                        "docker_script_path": "/workspace/Auto-GPT/DockStream/docker.py", // fixed
+                        "environment_path": "/home/vscode/micromamba/envs/DockStream/bin/python", // fixed
+                        "transformation": {
+                            "transformation_type": "reverse_sigmoid", // lower AutoDock Vina scores are better - use reverse sigmoid transformation
+                            "high": -5, // Update to the maximum docking score of your ligand
+                            "k": 0.25,
+                            "low": -12 // Update to the minimum docking score of your ligand
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "run_type": "reinforcement_learning",
+    "version": 3,
+    "model_type": "default"
+}
+
+2023-06-03 16:57:01,574 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the reinforcement_learning_setting.jsonc file and update it with the required information.\",\n        \"reasoning\": \"The first step is to read the existing file and then update it with the new configuration path and SMILES keys.\",\n        \"plan\": \"- Read reinforcement_learning_setting.jsonc\\n- Update the file with the new configuration path and SMILES keys\\n- Output the updated file as reinforcement_learning_setting.json\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the reinforcement_learning_setting.jsonc file, update it, and output the updated file as reinforcement_learning_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"reinforcement_learning_setting.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"logging\": {\n        \"job_id\": \"demo\", // only relevant if \"recipient\" is set to a specific REST endpoint\n        \"job_name\": \"Reinforcement learning demo\", // set an arbitrary job name for identification\n        \"logging_frequency\": 5, // log every x-th steps\n        \"logging_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\", // load this folder in tensorboard\n        \"recipient\": \"local\", // either to local logging or use a remote REST-interface\n        \"result_folder\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\", // will hold the compounds (SMILES) and summaries\n        \"sender\": \"http://0.0.0.1\" // only relevant if \"recipient\" is set to \"remote\"\n    },\n    \"parameters\": {\n        \"diversity_filter\": {\n            \"minscore\": 0.4, // the minimum total score to be considered for binning\n            \"minsimilarity\": 0.4, // the minimum similarity to be placed into the same bin\n            \"name\": \"IdenticalMurckoScaffold\", // other options are: \"IdenticalTopologicalScaffold\", \"NoFilter\" and \"ScaffoldSimilarity\" -> use \"NoFilter\" to disable this feature\n            \"nbmax\": 25 // the bin size; penalization will start once this is exceeded\n        },\n        \"inception\": {\n            \"memory_size\": 100, // sets how many molecules are to be remembered\n            \"sample_size\": 10, // how many are to be sampled each epoch from the memory\n            \"smiles\": [] // fill in a list of SMILES here that can be used (or leave empty)\n        },\n        \"reinforcement_learning\": {\n            \"prior\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\n            \"agent\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\n            \"n_steps\": 50, // the number of epochs (steps) to be performed; often 1000 (set to 2 in this notebook to decrease docking computation time - it is not expected that the agent will appreciably learn to generate compounds with good docking scores in only 2 epochs. The purpose of this notebook is to illustrate how DockStream  can be specified as a component to the `Scoring Function`)\n            \"sigma\": 128, // used to calculate the \"augmented likelihood\", see publication\n            \"learning_rate\": 0.0001, // sets how strongly the agent is influenced by each epoch\n            \"reset\": 0,\n            \"reset_score_cutoff\": 0.5,\n            \"batch_size\": 16, // specifies how many molecules are generated per epoch, often 128 docking becomes more computationally demanding the greater the batch size, as each compound must be docked. Depending on the docking configuration, embedding ligands may generate different  tautomers, ionization states, etc., which will increase the number of compounds that need to be docked. Batch size is set to 8 in  this notebook to decrease docking computation time and just for illustration)\n            \"margin_threshold\": 50 // specify the (positive) margin between agent and prior\n        },\n        \"scoring_function\": {\n            \"name\": \"custom_sum\",\n            \"parallel\": false, // sets whether components are to be executed in parallel; note, that python uses \"False\" / \"True\" but the JSON \"false\" / \"true\"\n            \"parameters\": [ //     # the \"parameters\" list holds the individual components\n                {\n                    \"component_type\": \"dockstream\", // use DockStream as a Scoring Function component      \n                    \"name\": \"dockstream\",\n                    \"weight\": 1,\n                    \"specific_parameters\": {\n                        \"configuration_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_docking.json\", // Update to your setting json created for docking\n                        \"docker_script_path\": \"/workspace/Auto-GPT/DockStream/docker.py\", // fixed\n                        \"environment_path\": \"/home/vscode/micromamba/envs/DockStream/bin/python\", // fixed\n                        \"transformation\": {\n                            \"transformation_type\": \"reverse_sigmoid\", // lower AutoDock Vina scores are better - use reverse sigmoid transformation\n                            \"high\": -5, // Update to the maximum docking score of your ligand\n                            \"k\": 0.25,\n                            \"low\": -12 // Update to the minimum docking score of your ligand\n                        }\n                    }\n                }\n            ]\n        }\n    },\n    \"run_type\": \"reinforcement_learning\",\n    \"version\": 3,\n    \"model_type\": \"default\"\n}\n"
+    }
+]
+2023-06-03 16:57:01,625 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\nI was created.\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'you', 'content': '{\"command\": {\"name\": \"read_file\", \"args\": {\"filename\": \"reinforcement_learning_setting.jsonc\"}}}'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 16:57:05,134 DEBUG  "I was created and read the file \"reinforcement_learning_setting.jsonc\"."
+2023-06-03 16:57:05,144 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read reinforcement_learning_setting.jsonc to know how to output setting json.\n2. Update the reinforcement_learning_setting.jsonc file to use `/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json` to configuration_path. Update the reinforcement_learning_setting.jsonc file to use \"C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1\", \"Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1\" and \"C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1\" SMILES keys to smiles. Output the file as reinforcement_learning_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n26. run_reinvent_with_docking: \"Run reinvent with reinforcement learning setting json.\", args: \"setting_json\": \"<setting_json>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 16:57:01 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI was created and read the file \"reinforcement_learning_setting.jsonc\"."
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"logging\": {\n        \"job_id\": \"demo\", // only relevant if \"recipient\" is set to a specific REST endpoint\n        \"job_name\": \"Reinforcement learning demo\", // set an arbitrary job name for identification\n        \"logging_frequency\": 5, // log every x-th steps\n        \"logging_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\", // load this folder in tensorboard\n        \"recipient\": \"local\", // either to local logging or use a remote REST-interface\n        \"result_folder\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\", // will hold the compounds (SMILES) and summaries\n        \"sender\": \"http://0.0.0.1\" // only relevant if \"recipient\" is set to \"remote\"\n    },\n    \"parameters\": {\n        \"diversity_filter\": {\n            \"minscore\": 0.4, // the minimum total score to be considered for binning\n            \"minsimilarity\": 0.4, // the minimum similarity to be placed into the same bin\n            \"name\": \"IdenticalMurckoScaffold\", // other options are: \"IdenticalTopologicalScaffold\", \"NoFilter\" and \"ScaffoldSimilarity\" -> use \"NoFilter\" to disable this feature\n            \"nbmax\": 25 // the bin size; penalization will start once this is exceeded\n        },\n        \"inception\": {\n            \"memory_size\": 100, // sets how many molecules are to be remembered\n            \"sample_size\": 10, // how many are to be sampled each epoch from the memory\n            \"smiles\": [] // fill in a list of SMILES here that can be used (or leave empty)\n        },\n        \"reinforcement_learning\": {\n            \"prior\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\n            \"agent\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\n            \"n_steps\": 50, // the number of epochs (steps) to be performed; often 1000 (set to 2 in this notebook to decrease docking computation time - it is not expected that the agent will appreciably learn to generate compounds with good docking scores in only 2 epochs. The purpose of this notebook is to illustrate how DockStream  can be specified as a component to the `Scoring Function`)\n            \"sigma\": 128, // used to calculate the \"augmented likelihood\", see publication\n            \"learning_rate\": 0.0001, // sets how strongly the agent is influenced by each epoch\n            \"reset\": 0,\n            \"reset_score_cutoff\": 0.5,\n            \"batch_size\": 16, // specifies how many molecules are generated per epoch, often 128 docking becomes more computationally demanding the greater the batch size, as each compound must be docked. Depending on the docking configuration, embedding ligands may generate different  tautomers, ionization states, etc., which will increase the number of compounds that need to be docked. Batch size is set to 8 in  this notebook to decrease docking computation time and just for illustration)\n            \"margin_threshold\": 50 // specify the (positive) margin between agent and prior\n        },\n        \"scoring_function\": {\n            \"name\": \"custom_sum\",\n            \"parallel\": false, // sets whether components are to be executed in parallel; note, that python uses \"False\" / \"True\" but the JSON \"false\" / \"true\"\n            \"parameters\": [ //     # the \"parameters\" list holds the individual components\n                {\n                    \"component_type\": \"dockstream\", // use DockStream as a Scoring Function component      \n                    \"name\": \"dockstream\",\n                    \"weight\": 1,\n                    \"specific_parameters\": {\n                        \"configuration_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_docking.json\", // Update to your setting json created for docking\n                        \"docker_script_path\": \"/workspace/Auto-GPT/DockStream/docker.py\", // fixed\n                        \"environment_path\": \"/home/vscode/micromamba/envs/DockStream/bin/python\", // fixed\n                        \"transformation\": {\n                            \"transformation_type\": \"reverse_sigmoid\", // lower AutoDock Vina scores are better - use reverse sigmoid transformation\n                            \"high\": -5, // Update to the maximum docking score of your ligand\n                            \"k\": 0.25,\n                            \"low\": -12 // Update to the minimum docking score of your ligand\n                        }\n                    }\n                }\n            ]\n        }\n    },\n    \"run_type\": \"reinforcement_learning\",\n    \"version\": 3,\n    \"model_type\": \"default\"\n}\n"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.945\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 16:58:13,904 INFO  THOUGHTS: I need to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.
+2023-06-03 16:58:14,230 INFO REASONING: The task requires me to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.
+2023-06-03 16:58:14,540 INFO PLAN: 
+2023-06-03 16:58:14,603 INFO -  Update the reinforcement_learning_setting.jsonc
+2023-06-03 16:58:14,758 INFO -  Output the updated file as reinforcement_learning_setting.json
+2023-06-03 16:58:14,996 INFO -  Shutdown when the task is done
+2023-06-03 16:58:15,157 INFO CRITICISM: None
+2023-06-03 16:58:15,295 DEBUG  {
+    "thoughts": {
+        "text": "I need to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.",
+        "reasoning": "The task requires me to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.",
+        "plan": "- Update the reinforcement_learning_setting.jsonc\n- Output the updated file as reinforcement_learning_setting.json\n- Shutdown when the task is done",
+        "criticism": "None",
+        "speak": "I will update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys, and then output the updated file as reinforcement_learning_setting.json."
+    },
+    "command": {
+        "name": "write_to_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/reinforcement_learning_setting.json",
+            "text": "{\"logging\": {\"job_id\": \"demo\", \"job_name\": \"Reinforcement learning demo\", \"logging_frequency\": 5, \"logging_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\", \"recipient\": \"local\", \"result_folder\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\", \"sender\": \"http://0.0.0.1\"}, \"parameters\": {\"diversity_filter\": {\"minscore\": 0.4, \"minsimilarity\": 0.4, \"name\": \"IdenticalMurckoScaffold\", \"nbmax\": 25}, \"inception\": {\"memory_size\": 100, \"sample_size\": 10, \"smiles\": [\"C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1\", \"Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1\", \"C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1\"]}, \"reinforcement_learning\": {\"prior\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", \"agent\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", \"n_steps\": 50, \"sigma\": 128, \"learning_rate\": 0.0001, \"reset\": 0, \"reset_score_cutoff\": 0.5, \"batch_size\": 16, \"margin_threshold\": 50}, \"scoring_function\": {\"name\": \"custom_sum\", \"parallel\": false, \"parameters\": [{\"component_type\": \"dockstream\", \"name\": \"dockstream\", \"weight\": 1, \"specific_parameters\": {\"configuration_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json\", \"docker_script_path\": \"/workspace/Auto-GPT/DockStream/docker.py\", \"environment_path\": \"/home/vscode/micromamba/envs/DockStream/bin/python\", \"transformation\": {\"transformation_type\": \"reverse_sigmoid\", \"high\": -5, \"k\": 0.25, \"low\": -12}}}]}, \"run_type\": \"reinforcement_learning\", \"version\": 3, \"model_type\": \"default\"}"
+        }
+    }
+}
+2023-06-03 16:58:15,342 INFO NEXT ACTION:  COMMAND = write_to_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/reinforcement_learning_setting.json', 'text': '{"logging": {"job_id": "demo", "job_name": "Reinforcement learning demo", "logging_frequency": 5, "logging_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log", "recipient": "local", "result_folder": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results", "sender": "http://0.0.0.1"}, "parameters": {"diversity_filter": {"minscore": 0.4, "minsimilarity": 0.4, "name": "IdenticalMurckoScaffold", "nbmax": 25}, "inception": {"memory_size": 100, "sample_size": 10, "smiles": ["C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1", "Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1", "C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1"]}, "reinforcement_learning": {"prior": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new", "agent": "/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new", "n_steps": 50, "sigma": 128, "learning_rate": 0.0001, "reset": 0, "reset_score_cutoff": 0.5, "batch_size": 16, "margin_threshold": 50}, "scoring_function": {"name": "custom_sum", "parallel": false, "parameters": [{"component_type": "dockstream", "name": "dockstream", "weight": 1, "specific_parameters": {"configuration_path": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json", "docker_script_path": "/workspace/Auto-GPT/DockStream/docker.py", "environment_path": "/home/vscode/micromamba/envs/DockStream/bin/python", "transformation": {"transformation_type": "reverse_sigmoid", "high": -5, "k": 0.25, "low": -12}}}]}, "run_type": "reinforcement_learning", "version": 3, "model_type": "default"}'}
+2023-06-03 16:58:15,967 INFO [36mAUTHORISED COMMANDS LEFT: [0m4 
+2023-06-03 16:58:16,125 INFO SYSTEM:  Command write_to_file returned: File written to successfully.
+2023-06-03 16:58:16,381 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the reinforcement_learning_setting.jsonc file and update it with the required information.\",\n        \"reasoning\": \"The first step is to read the existing file and then update it with the new configuration path and SMILES keys.\",\n        \"plan\": \"- Read reinforcement_learning_setting.jsonc\\n- Update the file with the new configuration path and SMILES keys\\n- Output the updated file as reinforcement_learning_setting.json\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the reinforcement_learning_setting.jsonc file, update it, and output the updated file as reinforcement_learning_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"reinforcement_learning_setting.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"logging\": {\n        \"job_id\": \"demo\", // only relevant if \"recipient\" is set to a specific REST endpoint\n        \"job_name\": \"Reinforcement learning demo\", // set an arbitrary job name for identification\n        \"logging_frequency\": 5, // log every x-th steps\n        \"logging_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\", // load this folder in tensorboard\n        \"recipient\": \"local\", // either to local logging or use a remote REST-interface\n        \"result_folder\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\", // will hold the compounds (SMILES) and summaries\n        \"sender\": \"http://0.0.0.1\" // only relevant if \"recipient\" is set to \"remote\"\n    },\n    \"parameters\": {\n        \"diversity_filter\": {\n            \"minscore\": 0.4, // the minimum total score to be considered for binning\n            \"minsimilarity\": 0.4, // the minimum similarity to be placed into the same bin\n            \"name\": \"IdenticalMurckoScaffold\", // other options are: \"IdenticalTopologicalScaffold\", \"NoFilter\" and \"ScaffoldSimilarity\" -> use \"NoFilter\" to disable this feature\n            \"nbmax\": 25 // the bin size; penalization will start once this is exceeded\n        },\n        \"inception\": {\n            \"memory_size\": 100, // sets how many molecules are to be remembered\n            \"sample_size\": 10, // how many are to be sampled each epoch from the memory\n            \"smiles\": [] // fill in a list of SMILES here that can be used (or leave empty)\n        },\n        \"reinforcement_learning\": {\n            \"prior\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\n            \"agent\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\n            \"n_steps\": 50, // the number of epochs (steps) to be performed; often 1000 (set to 2 in this notebook to decrease docking computation time - it is not expected that the agent will appreciably learn to generate compounds with good docking scores in only 2 epochs. The purpose of this notebook is to illustrate how DockStream  can be specified as a component to the `Scoring Function`)\n            \"sigma\": 128, // used to calculate the \"augmented likelihood\", see publication\n            \"learning_rate\": 0.0001, // sets how strongly the agent is influenced by each epoch\n            \"reset\": 0,\n            \"reset_score_cutoff\": 0.5,\n            \"batch_size\": 16, // specifies how many molecules are generated per epoch, often 128 docking becomes more computationally demanding the greater the batch size, as each compound must be docked. Depending on the docking configuration, embedding ligands may generate different  tautomers, ionization states, etc., which will increase the number of compounds that need to be docked. Batch size is set to 8 in  this notebook to decrease docking computation time and just for illustration)\n            \"margin_threshold\": 50 // specify the (positive) margin between agent and prior\n        },\n        \"scoring_function\": {\n            \"name\": \"custom_sum\",\n            \"parallel\": false, // sets whether components are to be executed in parallel; note, that python uses \"False\" / \"True\" but the JSON \"false\" / \"true\"\n            \"parameters\": [ //     # the \"parameters\" list holds the individual components\n                {\n                    \"component_type\": \"dockstream\", // use DockStream as a Scoring Function component      \n                    \"name\": \"dockstream\",\n                    \"weight\": 1,\n                    \"specific_parameters\": {\n                        \"configuration_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_docking.json\", // Update to your setting json created for docking\n                        \"docker_script_path\": \"/workspace/Auto-GPT/DockStream/docker.py\", // fixed\n                        \"environment_path\": \"/home/vscode/micromamba/envs/DockStream/bin/python\", // fixed\n                        \"transformation\": {\n                            \"transformation_type\": \"reverse_sigmoid\", // lower AutoDock Vina scores are better - use reverse sigmoid transformation\n                            \"high\": -5, // Update to the maximum docking score of your ligand\n                            \"k\": 0.25,\n                            \"low\": -12 // Update to the minimum docking score of your ligand\n                        }\n                    }\n                }\n            ]\n        }\n    },\n    \"run_type\": \"reinforcement_learning\",\n    \"version\": 3,\n    \"model_type\": \"default\"\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.\",\n        \"reasoning\": \"The task requires me to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.\",\n        \"plan\": \"- Update the reinforcement_learning_setting.jsonc\\n- Output the updated file as reinforcement_learning_setting.json\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys, and then output the updated file as reinforcement_learning_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"reinforcement_learning_setting.json\",\n            \"text\": \"{\\\"logging\\\": {\\\"job_id\\\": \\\"demo\\\", \\\"job_name\\\": \\\"Reinforcement learning demo\\\", \\\"logging_frequency\\\": 5, \\\"logging_path\\\": \\\"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\\\", \\\"recipient\\\": \\\"local\\\", \\\"result_folder\\\": \\\"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\\\", \\\"sender\\\": \\\"http://0.0.0.1\\\"}, \\\"parameters\\\": {\\\"diversity_filter\\\": {\\\"minscore\\\": 0.4, \\\"minsimilarity\\\": 0.4, \\\"name\\\": \\\"IdenticalMurckoScaffold\\\", \\\"nbmax\\\": 25}, \\\"inception\\\": {\\\"memory_size\\\": 100, \\\"sample_size\\\": 10, \\\"smiles\\\": [\\\"C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1\\\", \\\"Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1\\\", \\\"C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1\\\"]}, \\\"reinforcement_learning\\\": {\\\"prior\\\": \\\"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\\\", \\\"agent\\\": \\\"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\\\", \\\"n_steps\\\": 50, \\\"sigma\\\": 128, \\\"learning_rate\\\": 0.0001, \\\"reset\\\": 0, \\\"reset_score_cutoff\\\": 0.5, \\\"batch_size\\\": 16, \\\"margin_threshold\\\": 50}, \\\"scoring_function\\\": {\\\"name\\\": \\\"custom_sum\\\", \\\"parallel\\\": false, \\\"parameters\\\": [{\\\"component_type\\\": \\\"dockstream\\\", \\\"name\\\": \\\"dockstream\\\", \\\"weight\\\": 1, \\\"specific_parameters\\\": {\\\"configuration_path\\\": \\\"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json\\\", \\\"docker_script_path\\\": \\\"/workspace/Auto-GPT/DockStream/docker.py\\\", \\\"environment_path\\\": \\\"/home/vscode/micromamba/envs/DockStream/bin/python\\\", \\\"transformation\\\": {\\\"transformation_type\\\": \\\"reverse_sigmoid\\\", \\\"high\\\": -5, \\\"k\\\": 0.25, \\\"low\\\": -12}}}]}, \\\"run_type\\\": \\\"reinforcement_learning\\\", \\\"version\\\": 3, \\\"model_type\\\": \\\"default\\\"}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    }
+]
+2023-06-03 16:58:16,406 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nI was created and read the file \"reinforcement_learning_setting.jsonc\".'}\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'your computer', 'content': 'Command read_file returned: {\\n    \"logging\": {\\n        \"job_id\": \"demo\", // only relevant if \"recipient\" is set to a specific REST endpoint\\n        \"job_name\": \"Reinforcement learning demo\", // set an arbitrary job name for identification\\n        \"logging_frequency\": 5, // log every x-th steps\\n        \"logging_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\", // load this folder in tensorboard\\n        \"recipient\": \"local\", // either to local logging or use a remote REST-interface\\n        \"result_folder\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\", // will hold the compounds (SMILES) and summaries\\n        \"sender\": \"http://0.0.0.1\" // only relevant if \"recipient\" is set to \"remote\"\\n    },\\n    \"parameters\": {\\n        \"diversity_filter\": {\\n            \"minscore\": 0.4, // the minimum total score to be considered for binning\\n            \"minsimilarity\": 0.4, // the minimum similarity to be placed into the same bin\\n            \"name\": \"IdenticalMurckoScaffold\", // other options are: \"IdenticalTopologicalScaffold\", \"NoFilter\" and \"ScaffoldSimilarity\" -> use \"NoFilter\" to disable this feature\\n            \"nbmax\": 25 // the bin size; penalization will start once this is exceeded\\n        },\\n        \"inception\": {\\n            \"memory_size\": 100, // sets how many molecules are to be remembered\\n            \"sample_size\": 10, // how many are to be sampled each epoch from the memory\\n            \"smiles\": [] // fill in a list of SMILES here that can be used (or leave empty)\\n        },\\n        \"reinforcement_learning\": {\\n            \"prior\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\\n            \"agent\": \"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\", // fixed\\n            \"n_steps\": 50, // the number of epochs (steps) to be performed; often 1000 (set to 2 in this notebook to decrease docking computation time - it is not expected that the agent will appreciably learn to generate compounds with good docking scores in only 2 epochs. The purpose of this notebook is to illustrate how DockStream  can be specified as a component to the `Scoring Function`)\\n            \"sigma\": 128, // used to calculate the \"augmented likelihood\", see publication\\n            \"learning_rate\": 0.0001, // sets how strongly the agent is influenced by each epoch\\n            \"reset\": 0,\\n            \"reset_score_cutoff\": 0.5,\\n            \"batch_size\": 16, // specifies how many molecules are generated per epoch, often 128 docking becomes more computationally demanding the greater the batch size, as each compound must be docked. Depending on the docking configuration, embedding ligands may generate different  tautomers, ionization states, etc., which will increase the number of compounds that need to be docked. Batch size is set to 8 in  this notebook to decrease docking computation time and just for illustration)\\n            \"margin_threshold\": 50 // specify the (positive) margin between agent and prior\\n        },\\n        \"scoring_function\": {\\n            \"name\": \"custom_sum\",\\n            \"parallel\": false, // sets whether components are to be executed in parallel; note, that python uses \"False\" / \"True\" but the JSON \"false\" / \"true\"\\n            \"parameters\": [ //     # the \"parameters\" list holds the individual components\\n                {\\n                    \"component_type\": \"dockstream\", // use DockStream as a Scoring Function component      \\n                    \"name\": \"dockstream\",\\n                    \"weight\": 1,\\n                    \"specific_parameters\": {\\n                        \"configuration_path\": \"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/ADV_docking.json\", // Update to your setting json created for docking\\n                        \"docker_script_path\": \"/workspace/Auto-GPT/DockStream/docker.py\", // fixed\\n                        \"environment_path\": \"/home/vscode/micromamba/envs/DockStream/bin/python\", // fixed\\n                        \"transformation\": {\\n                            \"transformation_type\": \"reverse_sigmoid\", // lower AutoDock Vina scores are better - use reverse sigmoid transformation\\n                            \"high\": -5, // Update to the maximum docking score of your ligand\\n                            \"k\": 0.25,\\n                            \"low\": -12 // Update to the minimum docking score of your ligand\\n                        }\\n                    }\\n                }\\n            ]\\n        }\\n    },\\n    \"run_type\": \"reinforcement_learning\",\\n    \"version\": 3,\\n    \"model_type\": \"default\"\\n}\\n'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 16:58:23,119 DEBUG  "I read the file \"reinforcement_learning_setting.jsonc\" and found the configuration details for logging, parameters, and scoring function. The reinforcement learning parameters included n_steps, sigma, learning_rate, batch_size, and margin_threshold. The scoring function used a custom_sum with DockStream as a component and a reverse_sigmoid transformation."
+2023-06-03 16:58:23,128 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read reinforcement_learning_setting.jsonc to know how to output setting json.\n2. Update the reinforcement_learning_setting.jsonc file to use `/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json` to configuration_path. Update the reinforcement_learning_setting.jsonc file to use \"C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1\", \"Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1\" and \"C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1\" SMILES keys to smiles. Output the file as reinforcement_learning_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n26. run_reinvent_with_docking: \"Run reinvent with reinforcement learning setting json.\", args: \"setting_json\": \"<setting_json>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 16:58:16 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI read the file \"reinforcement_learning_setting.jsonc\" and found the configuration details for logging, parameters, and scoring function. The reinforcement learning parameters included n_steps, sigma, learning_rate, batch_size, and margin_threshold. The scoring function used a custom_sum with DockStream as a component and a reverse_sigmoid transformation."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.\",\n        \"reasoning\": \"The task requires me to update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys.\",\n        \"plan\": \"- Update the reinforcement_learning_setting.jsonc\\n- Output the updated file as reinforcement_learning_setting.json\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will update the reinforcement_learning_setting.jsonc file with the new configuration_path and SMILES keys, and then output the updated file as reinforcement_learning_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"reinforcement_learning_setting.json\",\n            \"text\": \"{\\\"logging\\\": {\\\"job_id\\\": \\\"demo\\\", \\\"job_name\\\": \\\"Reinforcement learning demo\\\", \\\"logging_frequency\\\": 5, \\\"logging_path\\\": \\\"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/progress.log\\\", \\\"recipient\\\": \\\"local\\\", \\\"result_folder\\\": \\\"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results\\\", \\\"sender\\\": \\\"http://0.0.0.1\\\"}, \\\"parameters\\\": {\\\"diversity_filter\\\": {\\\"minscore\\\": 0.4, \\\"minsimilarity\\\": 0.4, \\\"name\\\": \\\"IdenticalMurckoScaffold\\\", \\\"nbmax\\\": 25}, \\\"inception\\\": {\\\"memory_size\\\": 100, \\\"sample_size\\\": 10, \\\"smiles\\\": [\\\"C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1\\\", \\\"Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1\\\", \\\"C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1\\\"]}, \\\"reinforcement_learning\\\": {\\\"prior\\\": \\\"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\\\", \\\"agent\\\": \\\"/workspace/Auto-GPT/ReinventCommunity/notebooks/models/random.prior.new\\\", \\\"n_steps\\\": 50, \\\"sigma\\\": 128, \\\"learning_rate\\\": 0.0001, \\\"reset\\\": 0, \\\"reset_score_cutoff\\\": 0.5, \\\"batch_size\\\": 16, \\\"margin_threshold\\\": 50}, \\\"scoring_function\\\": {\\\"name\\\": \\\"custom_sum\\\", \\\"parallel\\\": false, \\\"parameters\\\": [{\\\"component_type\\\": \\\"dockstream\\\", \\\"name\\\": \\\"dockstream\\\", \\\"weight\\\": 1, \\\"specific_parameters\\\": {\\\"configuration_path\\\": \\\"/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json\\\", \\\"docker_script_path\\\": \\\"/workspace/Auto-GPT/DockStream/docker.py\\\", \\\"environment_path\\\": \\\"/home/vscode/micromamba/envs/DockStream/bin/python\\\", \\\"transformation\\\": {\\\"transformation_type\\\": \\\"reverse_sigmoid\\\", \\\"high\\\": -5, \\\"k\\\": 0.25, \\\"low\\\": -12}}}]}, \\\"run_type\\\": \\\"reinforcement_learning\\\", \\\"version\\\": 3, \\\"model_type\\\": \\\"default\\\"}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.787\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 16:58:34,712 INFO  THOUGHTS: I have updated the reinforcement_learning_setting.json file. Now, I need to shut down.
+2023-06-03 16:58:34,983 INFO REASONING: The task is complete, and I need to shut down as instructed.
+2023-06-03 16:58:35,289 INFO PLAN: 
+2023-06-03 16:58:35,367 INFO -  Shutdown
+2023-06-03 16:58:35,480 INFO CRITICISM: None
+2023-06-03 16:58:35,581 DEBUG  {
+    "thoughts": {
+        "text": "I have updated the reinforcement_learning_setting.json file. Now, I need to shut down.",
+        "reasoning": "The task is complete, and I need to shut down as instructed.",
+        "plan": "- Shutdown",
+        "criticism": "None",
+        "speak": "I have updated the reinforcement_learning_setting.json file. Now, I will shut down."
+    },
+    "command": {
+        "name": "task_complete",
+        "args": {
+            "reason": "Task completed successfully"
+        }
+    }
+}
+2023-06-03 16:58:35,587 INFO NEXT ACTION:  COMMAND = task_complete  ARGUMENTS = {'reason': 'Task completed successfully'}
+2023-06-03 16:58:35,811 INFO [36mAUTHORISED COMMANDS LEFT: [0m3 
+2023-06-03 16:58:35,944 INFO Shutting down...
+ Task completed successfully

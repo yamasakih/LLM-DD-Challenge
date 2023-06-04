@@ -1,0 +1,314 @@
+2023-06-03 15:13:09,686 INFO GPT4 Only Mode:  ENABLED
+2023-06-03 15:13:09,817 INFO Using AI Settings File: ai_settings_230603.yaml
+2023-06-03 15:13:10,298 INFO NEWS: Welcome to Auto-GPT!
+2023-06-03 15:13:10,299 INFO NEWS: Below you'll find the latest Auto-GPT News and updates regarding features!
+2023-06-03 15:13:10,300 INFO NEWS: If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag.
+2023-06-03 15:13:10,301 INFO NEWS: 
+2023-06-03 15:13:10,302 INFO NEWS: Website and Documentation Site 📰📖
+2023-06-03 15:13:10,303 INFO NEWS: Check out https://agpt.co, the official news & updates site for Auto-GPT!
+2023-06-03 15:13:10,304 INFO NEWS: The documentation also has a place here, at https://docs.agpt.co
+2023-06-03 15:13:10,305 INFO NEWS: 
+2023-06-03 15:13:10,306 INFO NEWS: For contributors 👷🏼
+2023-06-03 15:13:10,306 INFO NEWS: Since releasing v0.3.0, we are working on re-architecting the Auto-GPT core to make
+2023-06-03 15:13:10,307 INFO NEWS: it more extensible and to make room for structural performance-oriented R&D.
+2023-06-03 15:13:10,308 INFO NEWS: In the meantime, we have less time to process incoming pull requests and issues,
+2023-06-03 15:13:10,309 INFO NEWS: so we focus on high-value contributions:
+2023-06-03 15:13:10,309 INFO NEWS:  * significant bugfixes
+2023-06-03 15:13:10,310 INFO NEWS:   major* improvements to existing functionality and/or docs (so no single-typo fixes)
+2023-06-03 15:13:10,312 INFO NEWS:  * contributions that help us with re-architecture and other roadmapped items
+2023-06-03 15:13:10,313 INFO NEWS: We have to be somewhat selective in order to keep making progress, but this does not
+2023-06-03 15:13:10,314 INFO NEWS: mean you can't contribute. Check out the contribution guide on our wiki:
+2023-06-03 15:13:10,315 INFO NEWS: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing
+2023-06-03 15:13:10,319 INFO NEWS: 
+2023-06-03 15:13:10,320 INFO NEWS: 🚀 v0.3.1 Release 🚀
+2023-06-03 15:13:10,322 INFO NEWS: Over a week and 47 pull requests have passed since v0.3.0, and we are happy to announce
+2023-06-03 15:13:10,324 INFO NEWS: the release of v0.3.1!
+2023-06-03 15:13:10,327 INFO NEWS: 
+2023-06-03 15:13:10,330 INFO NEWS: Highlights and notable changes since v0.2.2:
+2023-06-03 15:13:10,331 INFO NEWS: 
+2023-06-03 15:13:10,334 INFO NEWS: Changes to Docker configuration 🐋
+2023-06-03 15:13:10,336 INFO NEWS:   The workdir has been changed from /home/appuser to /app*.
+2023-06-03 15:13:10,340 INFO NEWS:     Be sure to update any volume mounts accordingly!
+2023-06-03 15:13:10,342 INFO NEWS:  * Docker-compose 1.29.0 is now required.
+2023-06-03 15:13:10,344 INFO NEWS: 
+2023-06-03 15:13:10,345 INFO NEWS: Logging 🧾
+2023-06-03 15:13:10,347 INFO NEWS:  * Log functionality has been improved for better understanding
+2023-06-03 15:13:10,348 INFO NEWS:     and easier summarization.
+2023-06-03 15:13:10,349 INFO NEWS:  * All LLM interactions are now logged to logs/DEBUG, to help with
+2023-06-03 15:13:10,350 INFO NEWS:     debugging and development.
+2023-06-03 15:13:10,352 INFO NEWS: 
+2023-06-03 15:13:10,354 INFO NEWS: Other
+2023-06-03 15:13:10,356 INFO NEWS:  * Edge browser is now supported by the `browse_website` command.
+2023-06-03 15:13:10,357 INFO NEWS:  * Sets of commands can now be disabled using DISABLED_COMMAND_CATEGORIES in .env.
+2023-06-03 15:13:10,358 INFO NEWS: 
+2023-06-03 15:13:10,359 INFO NEWS: ⚠️ Command `send_tweet` is REMOVED
+2023-06-03 15:13:10,360 INFO NEWS: Twitter functionality (and more) is now covered by plugins, see [Plugin support 🔌]
+2023-06-03 15:13:10,361 INFO NEWS: 
+2023-06-03 15:13:10,363 INFO NEWS: Plugin support 🔌
+2023-06-03 15:13:10,364 INFO NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities,
+2023-06-03 15:13:10,366 INFO NEWS: adding support for third-party services and more.
+2023-06-03 15:13:10,367 INFO NEWS: See https://github.com/Significant-Gravitas/Auto-GPT-Plugins for instructions and
+2023-06-03 15:13:10,368 INFO NEWS: available plugins. Specific plugins can be allowlisted/denylisted in .env.
+2023-06-03 15:13:10,369 INFO NEWS: 
+2023-06-03 15:13:10,370 INFO NEWS: Memory backend deprecation ⚠️
+2023-06-03 15:13:10,372 INFO NEWS: The Milvus, Pinecone and Weaviate memory backends were rendered incompatible
+2023-06-03 15:13:10,373 INFO NEWS: by work on the memory system, and have been removed in `master`. The Redis
+2023-06-03 15:13:10,374 INFO NEWS: memory store was also temporarily removed but we aim to merge a new implementation
+2023-06-03 15:13:10,376 INFO NEWS: before the next release.
+2023-06-03 15:13:10,377 INFO NEWS: Whether built-in support for the others will be added back in the future is subject to
+2023-06-03 15:13:10,379 INFO NEWS: discussion, feel free to pitch in: https://github.com/Significant-Gravitas/Auto-GPT/discussions/4280
+2023-06-03 15:13:10,381 INFO NEWS: 
+2023-06-03 15:13:10,382 INFO NEWS: Challenge Workflow 🏆
+2023-06-03 15:13:10,384 INFO NEWS: If you have been working on challenges... Thank You!
+2023-06-03 15:13:10,385 INFO NEWS: But to run the debugger challenge or other challenges using cassettes and VCR in docker, You will now need to `pip uninstall vcrpy` and `pip install -r requirements.txt` again.
+2023-06-03 15:13:10,388 INFO NEWS: This will install a new version of vcrpy that is compatible with running vcr in docker.
+2023-06-03 15:13:10,389 INFO NEWS: This workflow will be fixed as soon as the maintainer from VCRpy merges our changes.
+2023-06-03 15:13:10,390 INFO NEWS: 
+2023-06-03 15:13:14,316 INFO  
+Plugins found: 1
+--------------------
+2023-06-03 15:13:14,318 INFO  Auto-GPT-Chemoinformatics-plugin: 0.1.0 - This is the Auto-GPT chemoinformatics plugin.
+2023-06-03 15:13:14,461 INFO Name : Hoshino AI
+2023-06-03 15:13:14,602 INFO Role : Medicinal Chemist and Chemoinformatician
+2023-06-03 15:13:14,766 INFO Goals: ['Implement a Python script named smiles_from_sdf.py using RDKit to output the SMILES key of the chemical structure with IC50_range_nM tag "<100" (note that it is a string) from /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf to /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt using RDKit.', 'Run smiles_from_sdf.py', 'Shutdown when task is done.']
+2023-06-03 15:13:15,276 INFO API Budget: $3.0
+2023-06-03 15:13:15,396 INFO Hoshino AI has been created with the following details:
+2023-06-03 15:13:15,650 INFO Name: Hoshino AI
+2023-06-03 15:13:15,763 INFO Role: Medicinal Chemist and Chemoinformatician
+2023-06-03 15:13:15,929 INFO Goals: 
+2023-06-03 15:13:16,005 INFO - Implement a Python script named smiles_from_sdf.py using RDKit to output the SMILES key of the chemical structure with IC50_range_nM tag "<100" (note that it is a string) from /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf to /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt using RDKit.
+2023-06-03 15:13:16,573 INFO - Run smiles_from_sdf.py
+2023-06-03 15:13:16,669 INFO - Shutdown when task is done.
+2023-06-03 15:13:16,925 INFO Using memory of type: LocalCache
+2023-06-03 15:13:17,076 INFO Using Browser: chrome
+2023-06-03 15:13:17,226 DEBUG  []
+2023-06-03 15:13:17,707 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Implement a Python script named smiles_from_sdf.py using RDKit to output the SMILES key of the chemical structure with IC50_range_nM tag \"<100\" (note that it is a string) from /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf to /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt using RDKit.\n2. Run smiles_from_sdf.py\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:13:17 2023"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $3.000\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:14:08,074 INFO  THOUGHTS: I need to create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.
+2023-06-03 15:14:08,535 INFO REASONING: To achieve the goal, I should start by writing a Python script using RDKit to process the SDF file and extract the required information.
+2023-06-03 15:14:09,035 INFO PLAN: 
+2023-06-03 15:14:09,106 INFO -  Write the Python script
+2023-06-03 15:14:09,243 INFO -  Save the script to a file
+2023-06-03 15:14:09,427 INFO -  Execute the script
+2023-06-03 15:14:09,572 INFO -  Shutdown when the task is done
+2023-06-03 15:14:09,830 INFO CRITICISM: None
+2023-06-03 15:14:09,953 DEBUG  {
+    "thoughts": {
+        "text": "I need to create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.",
+        "reasoning": "To achieve the goal, I should start by writing a Python script using RDKit to process the SDF file and extract the required information.",
+        "plan": "- Write the Python script\n- Save the script to a file\n- Execute the script\n- Shutdown when the task is done",
+        "criticism": "None",
+        "speak": "I will create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file."
+    },
+    "command": {
+        "name": "write_to_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/smiles_from_sdf.py",
+            "text": "import os\nfrom rdkit import Chem\nfrom rdkit.Chem import AllChem\n\ninput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf'\noutput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt'\n\nsuppl = Chem.SDMolSupplier(input_file)\n\nwith open(output_file, 'w') as f:\n    for mol in suppl:\n        if mol is not None:\n            ic50_range = mol.GetProp('IC50_range_nM')\n            if ic50_range == '<100':\n                smiles = Chem.MolToSmiles(mol)\n                f.write(smiles + '\\n')"
+        }
+    }
+}
+2023-06-03 15:14:09,959 INFO NEXT ACTION:  COMMAND = write_to_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/smiles_from_sdf.py', 'text': "import os\nfrom rdkit import Chem\nfrom rdkit.Chem import AllChem\n\ninput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf'\noutput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt'\n\nsuppl = Chem.SDMolSupplier(input_file)\n\nwith open(output_file, 'w') as f:\n    for mol in suppl:\n        if mol is not None:\n            ic50_range = mol.GetProp('IC50_range_nM')\n            if ic50_range == '<100':\n                smiles = Chem.MolToSmiles(mol)\n                f.write(smiles + '\\n')"}
+2023-06-03 15:14:10,503 INFO  Enter 'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands, 'n' to exit program, or enter feedback for ...
+2023-06-03 15:14:10,506 INFO  Asking user via keyboard...
+2023-06-03 15:14:46,372 INFO -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-= 
+2023-06-03 15:14:46,603 INFO SYSTEM:  Command write_to_file returned: File written to successfully.
+2023-06-03 15:14:46,874 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\",\n        \"reasoning\": \"To achieve the goal, I should start by writing a Python script using RDKit to process the SDF file and extract the required information.\",\n        \"plan\": \"- Write the Python script\\n- Save the script to a file\\n- Execute the script\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"smiles_from_sdf.py\",\n            \"text\": \"import os\\nfrom rdkit import Chem\\nfrom rdkit.Chem import AllChem\\n\\ninput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf'\\noutput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt'\\n\\nsuppl = Chem.SDMolSupplier(input_file)\\n\\nwith open(output_file, 'w') as f:\\n    for mol in suppl:\\n        if mol is not None:\\n            ic50_range = mol.GetProp('IC50_range_nM')\\n            if ic50_range == '<100':\\n                smiles = Chem.MolToSmiles(mol)\\n                f.write(smiles + '\\\\n')\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    }
+]
+2023-06-03 15:14:46,891 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\nI was created.\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:14:50,616 DEBUG  "Summary So Far:\n\"\"\"\nI was created. Nothing new happened.\n\"\"\""
+2023-06-03 15:14:50,631 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Implement a Python script named smiles_from_sdf.py using RDKit to output the SMILES key of the chemical structure with IC50_range_nM tag \"<100\" (note that it is a string) from /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf to /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt using RDKit.\n2. Run smiles_from_sdf.py\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:14:46 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nSummary So Far:\n\"\"\"\nI was created. Nothing new happened.\n\"\"\""
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\",\n        \"reasoning\": \"To achieve the goal, I should start by writing a Python script using RDKit to process the SDF file and extract the required information.\",\n        \"plan\": \"- Write the Python script\\n- Save the script to a file\\n- Execute the script\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"smiles_from_sdf.py\",\n            \"text\": \"import os\\nfrom rdkit import Chem\\nfrom rdkit.Chem import AllChem\\n\\ninput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf'\\noutput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt'\\n\\nsuppl = Chem.SDMolSupplier(input_file)\\n\\nwith open(output_file, 'w') as f:\\n    for mol in suppl:\\n        if mol is not None:\\n            ic50_range = mol.GetProp('IC50_range_nM')\\n            if ic50_range == '<100':\\n                smiles = Chem.MolToSmiles(mol)\\n                f.write(smiles + '\\\\n')\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.938\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:15:09,148 INFO  THOUGHTS: I have written the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file. Now, I need to execute the script.
+2023-06-03 15:15:09,611 INFO REASONING: To achieve the goal, I should execute the Python script I just wrote.
+2023-06-03 15:15:09,957 INFO PLAN: 
+2023-06-03 15:15:10,011 INFO -  Execute the script
+2023-06-03 15:15:10,127 INFO -  Shutdown when the task is done
+2023-06-03 15:15:10,334 INFO CRITICISM: None
+2023-06-03 15:15:10,414 DEBUG  {
+    "thoughts": {
+        "text": "I have written the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file. Now, I need to execute the script.",
+        "reasoning": "To achieve the goal, I should execute the Python script I just wrote.",
+        "plan": "- Execute the script\n- Shutdown when the task is done",
+        "criticism": "None",
+        "speak": "I will now execute the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file."
+    },
+    "command": {
+        "name": "execute_python_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/smiles_from_sdf.py"
+        }
+    }
+}
+2023-06-03 15:15:10,434 INFO NEXT ACTION:  COMMAND = execute_python_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/smiles_from_sdf.py'}
+2023-06-03 15:15:10,597 INFO [36mAUTHORISED COMMANDS LEFT: [0m2 
+2023-06-03 15:15:10,718 INFO  Executing file '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/smiles_from_sdf.py'
+2023-06-03 15:15:11,276 INFO SYSTEM:  Command execute_python_file returned: 
+2023-06-03 15:15:11,457 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\",\n        \"reasoning\": \"To achieve the goal, I should start by writing a Python script using RDKit to process the SDF file and extract the required information.\",\n        \"plan\": \"- Write the Python script\\n- Save the script to a file\\n- Execute the script\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"smiles_from_sdf.py\",\n            \"text\": \"import os\\nfrom rdkit import Chem\\nfrom rdkit.Chem import AllChem\\n\\ninput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf'\\noutput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt'\\n\\nsuppl = Chem.SDMolSupplier(input_file)\\n\\nwith open(output_file, 'w') as f:\\n    for mol in suppl:\\n        if mol is not None:\\n            ic50_range = mol.GetProp('IC50_range_nM')\\n            if ic50_range == '<100':\\n                smiles = Chem.MolToSmiles(mol)\\n                f.write(smiles + '\\\\n')\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I have written the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file. Now, I need to execute the script.\",\n        \"reasoning\": \"To achieve the goal, I should execute the Python script I just wrote.\",\n        \"plan\": \"- Execute the script\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now execute the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\"\n    },\n    \"command\": {\n        \"name\": \"execute_python_file\",\n        \"args\": {\n            \"filename\": \"smiles_from_sdf.py\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command execute_python_file returned: "
+    }
+]
+2023-06-03 15:15:11,471 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nSummary So Far:\\n\"\"\"\\nI was created. Nothing new happened.\\n\"\"\"'}\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:15:13,445 DEBUG  "Summary So Far:\n\"\"\"\nI was created. Nothing new happened.\n\"\"\""
+2023-06-03 15:15:13,458 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Implement a Python script named smiles_from_sdf.py using RDKit to output the SMILES key of the chemical structure with IC50_range_nM tag \"<100\" (note that it is a string) from /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf to /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt using RDKit.\n2. Run smiles_from_sdf.py\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:15:11 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nSummary So Far:\n\"\"\"\nI was created. Nothing new happened.\n\"\"\""
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\",\n        \"reasoning\": \"To achieve the goal, I should start by writing a Python script using RDKit to process the SDF file and extract the required information.\",\n        \"plan\": \"- Write the Python script\\n- Save the script to a file\\n- Execute the script\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will create a Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"smiles_from_sdf.py\",\n            \"text\": \"import os\\nfrom rdkit import Chem\\nfrom rdkit.Chem import AllChem\\n\\ninput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf'\\noutput_file = '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt'\\n\\nsuppl = Chem.SDMolSupplier(input_file)\\n\\nwith open(output_file, 'w') as f:\\n    for mol in suppl:\\n        if mol is not None:\\n            ic50_range = mol.GetProp('IC50_range_nM')\\n            if ic50_range == '<100':\\n                smiles = Chem.MolToSmiles(mol)\\n                f.write(smiles + '\\\\n')\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I have written the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file. Now, I need to execute the script.\",\n        \"reasoning\": \"To achieve the goal, I should execute the Python script I just wrote.\",\n        \"plan\": \"- Execute the script\\n- Shutdown when the task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now execute the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file.\"\n    },\n    \"command\": {\n        \"name\": \"execute_python_file\",\n        \"args\": {\n            \"filename\": \"smiles_from_sdf.py\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command execute_python_file returned: "
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.874\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:15:26,615 INFO  THOUGHTS: I have executed the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file. The task is complete.
+2023-06-03 15:15:27,087 INFO REASONING: Since the task is complete, I should shut down.
+2023-06-03 15:15:27,354 INFO PLAN: 
+2023-06-03 15:15:27,424 INFO -  Shutdown
+2023-06-03 15:15:27,495 INFO CRITICISM: None
+2023-06-03 15:15:27,564 DEBUG  {
+    "thoughts": {
+        "text": "I have executed the Python script to extract the SMILES key of chemical structures with IC50_range_nM tag '<100' from the given SDF file. The task is complete.",
+        "reasoning": "Since the task is complete, I should shut down.",
+        "plan": "- Shutdown",
+        "criticism": "None",
+        "speak": "The task is complete. I will now shut down."
+    },
+    "command": {
+        "name": "task_complete",
+        "args": {
+            "reason": "Task complete"
+        }
+    }
+}
+2023-06-03 15:15:27,574 INFO NEXT ACTION:  COMMAND = task_complete  ARGUMENTS = {'reason': 'Task complete'}
+2023-06-03 15:15:27,850 INFO [36mAUTHORISED COMMANDS LEFT: [0m1 
+2023-06-03 15:15:27,967 INFO Shutting down...
+ Task complete

@@ -1,0 +1,984 @@
+2023-06-03 15:49:30,950 INFO GPT4 Only Mode:  ENABLED
+2023-06-03 15:49:31,070 INFO Using AI Settings File: ai_settings_230603_3.yaml
+2023-06-03 15:49:31,511 INFO NEWS: Welcome to Auto-GPT!
+2023-06-03 15:49:31,512 INFO NEWS: Below you'll find the latest Auto-GPT News and updates regarding features!
+2023-06-03 15:49:31,515 INFO NEWS: If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag.
+2023-06-03 15:49:31,519 INFO NEWS: 
+2023-06-03 15:49:31,522 INFO NEWS: Website and Documentation Site 📰📖
+2023-06-03 15:49:31,525 INFO NEWS: Check out https://agpt.co, the official news & updates site for Auto-GPT!
+2023-06-03 15:49:31,528 INFO NEWS: The documentation also has a place here, at https://docs.agpt.co
+2023-06-03 15:49:31,531 INFO NEWS: 
+2023-06-03 15:49:31,534 INFO NEWS: For contributors 👷🏼
+2023-06-03 15:49:31,537 INFO NEWS: Since releasing v0.3.0, we are working on re-architecting the Auto-GPT core to make
+2023-06-03 15:49:31,541 INFO NEWS: it more extensible and to make room for structural performance-oriented R&D.
+2023-06-03 15:49:31,545 INFO NEWS: In the meantime, we have less time to process incoming pull requests and issues,
+2023-06-03 15:49:31,548 INFO NEWS: so we focus on high-value contributions:
+2023-06-03 15:49:31,551 INFO NEWS:  * significant bugfixes
+2023-06-03 15:49:31,554 INFO NEWS:   major* improvements to existing functionality and/or docs (so no single-typo fixes)
+2023-06-03 15:49:31,558 INFO NEWS:  * contributions that help us with re-architecture and other roadmapped items
+2023-06-03 15:49:31,562 INFO NEWS: We have to be somewhat selective in order to keep making progress, but this does not
+2023-06-03 15:49:31,564 INFO NEWS: mean you can't contribute. Check out the contribution guide on our wiki:
+2023-06-03 15:49:31,567 INFO NEWS: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing
+2023-06-03 15:49:31,579 INFO NEWS: 
+2023-06-03 15:49:31,582 INFO NEWS: 🚀 v0.3.1 Release 🚀
+2023-06-03 15:49:31,585 INFO NEWS: Over a week and 47 pull requests have passed since v0.3.0, and we are happy to announce
+2023-06-03 15:49:31,588 INFO NEWS: the release of v0.3.1!
+2023-06-03 15:49:31,594 INFO NEWS: 
+2023-06-03 15:49:31,597 INFO NEWS: Highlights and notable changes since v0.2.2:
+2023-06-03 15:49:31,600 INFO NEWS: 
+2023-06-03 15:49:31,602 INFO NEWS: Changes to Docker configuration 🐋
+2023-06-03 15:49:31,607 INFO NEWS:   The workdir has been changed from /home/appuser to /app*.
+2023-06-03 15:49:31,609 INFO NEWS:     Be sure to update any volume mounts accordingly!
+2023-06-03 15:49:31,613 INFO NEWS:  * Docker-compose 1.29.0 is now required.
+2023-06-03 15:49:31,618 INFO NEWS: 
+2023-06-03 15:49:31,625 INFO NEWS: Logging 🧾
+2023-06-03 15:49:31,629 INFO NEWS:  * Log functionality has been improved for better understanding
+2023-06-03 15:49:31,633 INFO NEWS:     and easier summarization.
+2023-06-03 15:49:31,636 INFO NEWS:  * All LLM interactions are now logged to logs/DEBUG, to help with
+2023-06-03 15:49:31,640 INFO NEWS:     debugging and development.
+2023-06-03 15:49:31,644 INFO NEWS: 
+2023-06-03 15:49:31,649 INFO NEWS: Other
+2023-06-03 15:49:31,654 INFO NEWS:  * Edge browser is now supported by the `browse_website` command.
+2023-06-03 15:49:31,656 INFO NEWS:  * Sets of commands can now be disabled using DISABLED_COMMAND_CATEGORIES in .env.
+2023-06-03 15:49:31,660 INFO NEWS: 
+2023-06-03 15:49:31,662 INFO NEWS: ⚠️ Command `send_tweet` is REMOVED
+2023-06-03 15:49:31,664 INFO NEWS: Twitter functionality (and more) is now covered by plugins, see [Plugin support 🔌]
+2023-06-03 15:49:31,669 INFO NEWS: 
+2023-06-03 15:49:31,673 INFO NEWS: Plugin support 🔌
+2023-06-03 15:49:31,676 INFO NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities,
+2023-06-03 15:49:31,679 INFO NEWS: adding support for third-party services and more.
+2023-06-03 15:49:31,682 INFO NEWS: See https://github.com/Significant-Gravitas/Auto-GPT-Plugins for instructions and
+2023-06-03 15:49:31,688 INFO NEWS: available plugins. Specific plugins can be allowlisted/denylisted in .env.
+2023-06-03 15:49:31,692 INFO NEWS: 
+2023-06-03 15:49:31,697 INFO NEWS: Memory backend deprecation ⚠️
+2023-06-03 15:49:31,703 INFO NEWS: The Milvus, Pinecone and Weaviate memory backends were rendered incompatible
+2023-06-03 15:49:31,705 INFO NEWS: by work on the memory system, and have been removed in `master`. The Redis
+2023-06-03 15:49:31,707 INFO NEWS: memory store was also temporarily removed but we aim to merge a new implementation
+2023-06-03 15:49:31,709 INFO NEWS: before the next release.
+2023-06-03 15:49:31,713 INFO NEWS: Whether built-in support for the others will be added back in the future is subject to
+2023-06-03 15:49:31,716 INFO NEWS: discussion, feel free to pitch in: https://github.com/Significant-Gravitas/Auto-GPT/discussions/4280
+2023-06-03 15:49:31,720 INFO NEWS: 
+2023-06-03 15:49:31,723 INFO NEWS: Challenge Workflow 🏆
+2023-06-03 15:49:31,726 INFO NEWS: If you have been working on challenges... Thank You!
+2023-06-03 15:49:31,728 INFO NEWS: But to run the debugger challenge or other challenges using cassettes and VCR in docker, You will now need to `pip uninstall vcrpy` and `pip install -r requirements.txt` again.
+2023-06-03 15:49:31,731 INFO NEWS: This will install a new version of vcrpy that is compatible with running vcr in docker.
+2023-06-03 15:49:31,735 INFO NEWS: This workflow will be fixed as soon as the maintainer from VCRpy merges our changes.
+2023-06-03 15:49:31,736 INFO NEWS: 
+2023-06-03 15:49:34,884 INFO  
+Plugins found: 1
+--------------------
+2023-06-03 15:49:34,884 INFO  Auto-GPT-Chemoinformatics-plugin: 0.1.0 - This is the Auto-GPT chemoinformatics plugin.
+2023-06-03 15:49:35,027 INFO Name : Hoshino AI
+2023-06-03 15:49:35,116 INFO Role : Medicinal Chemist and Chemoinformatician
+2023-06-03 15:49:35,243 INFO Goals: ['Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein', 'Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.', 'Shutdown when task is done.']
+2023-06-03 15:49:35,924 INFO API Budget: $3.0
+2023-06-03 15:49:36,047 INFO Hoshino AI has been created with the following details:
+2023-06-03 15:49:36,298 INFO Name: Hoshino AI
+2023-06-03 15:49:36,429 INFO Role: Medicinal Chemist and Chemoinformatician
+2023-06-03 15:49:36,586 INFO Goals: 
+2023-06-03 15:49:36,718 INFO - Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein
+2023-06-03 15:49:37,160 INFO - Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.
+2023-06-03 15:49:37,747 INFO - Shutdown when task is done.
+2023-06-03 15:49:37,946 INFO Using memory of type: LocalCache
+2023-06-03 15:49:38,105 INFO Using Browser: chrome
+2023-06-03 15:49:38,240 DEBUG  []
+2023-06-03 15:49:38,820 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:49:38 2023"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $3.000\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:50:04,443 INFO  THOUGHTS: I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.
+2023-06-03 15:50:04,909 INFO REASONING: Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.
+2023-06-03 15:50:05,283 INFO PLAN: 
+2023-06-03 15:50:05,365 INFO -  Read docking_example.jsonc
+2023-06-03 15:50:05,459 INFO -  Update the setting json file
+2023-06-03 15:50:05,630 INFO -  Output the file as docking_setting.json
+2023-06-03 15:50:05,838 INFO -  Shutdown when task is done
+2023-06-03 15:50:06,023 INFO CRITICISM: None
+2023-06-03 15:50:06,096 DEBUG  {
+    "thoughts": {
+        "text": "I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.",
+        "reasoning": "Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.",
+        "plan": "- Read docking_example.jsonc\n- Update the setting json file\n- Output the file as docking_setting.json\n- Shutdown when task is done",
+        "criticism": "None",
+        "speak": "I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein."
+    },
+    "command": {
+        "name": "read_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_example.jsonc"
+        }
+    }
+}
+2023-06-03 15:50:06,107 INFO NEXT ACTION:  COMMAND = read_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_example.jsonc'}
+2023-06-03 15:50:06,367 INFO  Enter 'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands, 'n' to exit program, or enter feedback for ...
+2023-06-03 15:50:06,368 INFO  Asking user via keyboard...
+2023-06-03 15:50:15,860 INFO -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-= 
+2023-06-03 15:50:16,077 INFO SYSTEM:  Command read_file returned: {
+    "docking": { // general settings
+        "header": {
+            "logging": { // logging settings (e.g. which file to write to)
+                "logfile": "/workspace/Auto-GPT/tutorial/ADV_docking.log"
+            }
+        },
+        "ligand_preparation": { // the ligand preparation part, defines how to build the pool
+            "embedding_pools": [
+                {
+                    "pool_id": "RDkit", // fixed
+                    "type": "RDkit", // fiexed
+                    "parameters": {
+                        "prefix_execution": "" // only required, if a module needs to be loaded to execute "Corina"
+                    },
+                    "input": {
+                        "standardize_smiles": false,
+                        "type": "console" // fixed
+                    },
+                    "output": { // the conformers can be written to a file, but "output" is not required as the ligands are forwarded internally
+                        "conformer_path": "/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf",
+                        "format": "sdf"
+                    }
+                }
+            ]
+        },
+        "docking_runs": [
+            {
+                "backend": "AutoDockVina",
+                "run_id": "AutoDockVina",
+                "input_pools": [
+                    "RDkit"
+                ],
+                "parameters": {
+                    "binary_location": "/home/vscode/micromamba/envs/DockStream/bin/", // fixed
+                    "parallelization": {
+                        "number_cores": 6 // fixed
+                    },
+                    "seed": 42, // use this "seed" to generate reproducible results; if varied, slightly different results will be produced
+                    "receptor_pdbqt_path": [
+                        "/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt" // target receptor PDBQT format file created by target protein preparation command
+                    ],
+                    "number_poses": 10, // number of poses to be generated
+                    "search_space": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file
+                        "--center_x": 0,
+                        "--center_y": 0,
+                        "--center_z": 0,
+                        "--size_x": 0,
+                        "--size_y": 0,
+                        "--size_z": 0
+                    }
+                },
+                "output": {
+                    "poses": {
+                        "poses_path": "/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf",
+                        "overwrite": false
+                    },
+                    "scores": {
+                        "scores_path": "/workspace/Auto-GPT/tutorial/ADV_scores.csv",
+                        "overwrite": false
+                    }
+                }
+            }
+        ]
+    }
+}
+
+2023-06-03 15:50:16,774 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    }
+]
+2023-06-03 15:50:16,815 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\nI was created.\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:50:18,299 DEBUG  "I was created. Nothing new happened."
+2023-06-03 15:50:18,313 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:50:16 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI was created. Nothing new happened."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.949\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:50:36,606 INFO  THOUGHTS: I need to run the target protein preparation command to get the log file containing the search space parameters.
+2023-06-03 15:50:37,008 INFO REASONING: The target protein preparation log file will provide the necessary information to update the docking setting json file.
+2023-06-03 15:50:37,462 INFO PLAN: 
+2023-06-03 15:50:37,554 INFO -  Run target protein preparation
+2023-06-03 15:50:37,656 INFO -  Read the log file
+2023-06-03 15:50:37,837 INFO -  Update the setting json file
+2023-06-03 15:50:37,975 INFO -  Output the file as docking_setting.json
+2023-06-03 15:50:38,181 INFO -  Shutdown when task is done
+2023-06-03 15:50:38,388 INFO CRITICISM: None
+2023-06-03 15:50:38,499 DEBUG  {
+    "thoughts": {
+        "text": "I need to run the target protein preparation command to get the log file containing the search space parameters.",
+        "reasoning": "The target protein preparation log file will provide the necessary information to update the docking setting json file.",
+        "plan": "- Run target protein preparation\n- Read the log file\n- Update the setting json file\n- Output the file as docking_setting.json\n- Shutdown when task is done",
+        "criticism": "None",
+        "speak": "I will run the target protein preparation command to get the log file containing the search space parameters."
+    },
+    "command": {
+        "name": "target_protein_preparation",
+        "args": {
+            "setting_json": "/workspace/Auto-GPT/tutorial/target_preparation_example.jsonc"
+        }
+    }
+}
+2023-06-03 15:50:38,508 INFO NEXT ACTION:  COMMAND = target_protein_preparation  ARGUMENTS = {'setting_json': '/workspace/Auto-GPT/tutorial/target_preparation_example.jsonc'}
+2023-06-03 15:50:38,762 INFO [36mAUTHORISED COMMANDS LEFT: [0m4 
+2023-06-03 15:50:39,763 INFO SYSTEM:  Command target_protein_preparation returned: Error: 'NoneType' object has no attribute 'decode'
+2023-06-03 15:50:40,121 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to run the target protein preparation command to get the log file containing the search space parameters.\",\n        \"reasoning\": \"The target protein preparation log file will provide the necessary information to update the docking setting json file.\",\n        \"plan\": \"- Run target protein preparation\\n- Read the log file\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will run the target protein preparation command to get the log file containing the search space parameters.\"\n    },\n    \"command\": {\n        \"name\": \"target_protein_preparation\",\n        \"args\": {\n            \"setting_json\": \"/workspace/Auto-GPT/tutorial/target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command target_protein_preparation returned: Error: 'NoneType' object has no attribute 'decode'"
+    }
+]
+2023-06-03 15:50:40,153 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nI was created. Nothing new happened.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:50:43,051 DEBUG  "This reminds you of these events from your past: \nI was created. Nothing new happened."
+2023-06-03 15:50:43,062 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:50:40 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nThis reminds you of these events from your past: \nI was created. Nothing new happened."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to run the target protein preparation command to get the log file containing the search space parameters.\",\n        \"reasoning\": \"The target protein preparation log file will provide the necessary information to update the docking setting json file.\",\n        \"plan\": \"- Run target protein preparation\\n- Read the log file\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will run the target protein preparation command to get the log file containing the search space parameters.\"\n    },\n    \"command\": {\n        \"name\": \"target_protein_preparation\",\n        \"args\": {\n            \"setting_json\": \"/workspace/Auto-GPT/tutorial/target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command target_protein_preparation returned: Error: 'NoneType' object has no attribute 'decode'"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.872\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:51:02,136 INFO  THOUGHTS: I need to read the target protein preparation log file to get the search space parameters.
+2023-06-03 15:51:02,507 INFO REASONING: The target protein preparation log file will provide the necessary information to update the docking setting json file.
+2023-06-03 15:51:02,889 INFO PLAN: 
+2023-06-03 15:51:02,983 INFO -  Read the target protein preparation log file
+2023-06-03 15:51:03,217 INFO -  Update the setting json file
+2023-06-03 15:51:03,427 INFO -  Output the file as docking_setting.json
+2023-06-03 15:51:03,619 INFO -  Shutdown when task is done
+2023-06-03 15:51:03,792 INFO CRITICISM: None
+2023-06-03 15:51:03,879 ERROR Error: 
+ Attempted to access absolute path '/workspace/Auto-GPT/tutorial/ADV_docking.log' in workspace '/workspace/Auto-GPT/autogpt/auto_gpt_workspace'.
+2023-06-03 15:51:03,886 DEBUG  {
+    "thoughts": {
+        "text": "I need to read the target protein preparation log file to get the search space parameters.",
+        "reasoning": "The target protein preparation log file will provide the necessary information to update the docking setting json file.",
+        "plan": "- Read the target protein preparation log file\n- Update the setting json file\n- Output the file as docking_setting.json\n- Shutdown when task is done",
+        "criticism": "None",
+        "speak": "I will read the target protein preparation log file to get the search space parameters."
+    },
+    "command": {
+        "name": "read_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/tutorial/ADV_docking.log"
+        }
+    }
+}
+2023-06-03 15:51:03,891 INFO NEXT ACTION:  COMMAND = read_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/tutorial/ADV_docking.log'}
+2023-06-03 15:51:04,142 INFO [36mAUTHORISED COMMANDS LEFT: [0m3 
+2023-06-03 15:51:04,300 INFO SYSTEM:  Command read_file returned: 2023-05-30 13:26:14 - DockStream version used: 1.0.0
+2023-05-30 13:26:14 - Could not load CCDC / Gold docker - if another backend is being used, you can safely ignore this warning. The exception message reads: No module named 'ccdc'
+2023-05-30 13:26:14 - Starting generation of pool RDkit.
+2023-05-30 13:26:14 - Completed construction of pool RDkit.
+2023-05-30 13:26:14 - Starting docking run AutoDockVina.
+2023-05-30 13:29:43 - |█████████████████------------------------------------------------| 26.7% 
+2023-05-30 13:33:15 - |██████████████████████████████████-------------------------------| 53.3% 
+2023-05-30 13:36:42 - |████████████████████████████████████████████████████-------------| 80.0% 
+2023-05-30 13:39:15 - |█████████████████████████████████████████████████████████████████| 100.0% 
+2023-05-30 13:39:15 - Completed docking run AutoDockVina.
+
+2023-06-03 15:51:04,904 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the docking_example.jsonc file will provide me with the necessary information to create the docking_setting.json file.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to run the target protein preparation command to get the log file containing the search space parameters.\",\n        \"reasoning\": \"The target protein preparation log file will provide the necessary information to update the docking setting json file.\",\n        \"plan\": \"- Run target protein preparation\\n- Read the log file\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will run the target protein preparation command to get the log file containing the search space parameters.\"\n    },\n    \"command\": {\n        \"name\": \"target_protein_preparation\",\n        \"args\": {\n            \"setting_json\": \"/workspace/Auto-GPT/tutorial/target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command target_protein_preparation returned: Error: 'NoneType' object has no attribute 'decode'"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the target protein preparation log file to get the search space parameters.\",\n        \"reasoning\": \"The target protein preparation log file will provide the necessary information to update the docking setting json file.\",\n        \"plan\": \"- Read the target protein preparation log file\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the target protein preparation log file to get the search space parameters.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: 2023-05-30 13:26:14 - DockStream version used: 1.0.0\n2023-05-30 13:26:14 - Could not load CCDC / Gold docker - if another backend is being used, you can safely ignore this warning. The exception message reads: No module named 'ccdc'\n2023-05-30 13:26:14 - Starting generation of pool RDkit.\n2023-05-30 13:26:14 - Completed construction of pool RDkit.\n2023-05-30 13:26:14 - Starting docking run AutoDockVina.\n2023-05-30 13:29:43 - |█████████████████------------------------------------------------| 26.7% \n2023-05-30 13:33:15 - |██████████████████████████████████-------------------------------| 53.3% \n2023-05-30 13:36:42 - |████████████████████████████████████████████████████-------------| 80.0% \n2023-05-30 13:39:15 - |█████████████████████████████████████████████████████████████████| 100.0% \n2023-05-30 13:39:15 - Completed docking run AutoDockVina.\n"
+    }
+]
+2023-06-03 15:51:04,923 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nThis reminds you of these events from your past: \\nI was created. Nothing new happened.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'you', 'content': '{\"command\": {\"name\": \"read_file\", \"args\": {\"filename\": \"docking_example.jsonc\"}}}'}, {'role': 'your computer', 'content': 'Command read_file returned: {\\n    \"docking\": { // general settings\\n        \"header\": {\\n            \"logging\": { // logging settings (e.g. which file to write to)\\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\\n            }\\n        },\\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\\n            \"embedding_pools\": [\\n                {\\n                    \"pool_id\": \"RDkit\", // fixed\\n                    \"type\": \"RDkit\", // fiexed\\n                    \"parameters\": {\\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\\n                    },\\n                    \"input\": {\\n                        \"standardize_smiles\": false,\\n                        \"type\": \"console\" // fixed\\n                    },\\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\\n                        \"format\": \"sdf\"\\n                    }\\n                }\\n            ]\\n        },\\n        \"docking_runs\": [\\n            {\\n                \"backend\": \"AutoDockVina\",\\n                \"run_id\": \"AutoDockVina\",\\n                \"input_pools\": [\\n                    \"RDkit\"\\n                ],\\n                \"parameters\": {\\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\\n                    \"parallelization\": {\\n                        \"number_cores\": 6 // fixed\\n                    },\\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\\n                    \"receptor_pdbqt_path\": [\\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\\n                    ],\\n                    \"number_poses\": 10, // number of poses to be generated\\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\\n                        \"--center_x\": 0,\\n                        \"--center_y\": 0,\\n                        \"--center_z\": 0,\\n                        \"--size_x\": 0,\\n                        \"--size_y\": 0,\\n                        \"--size_z\": 0\\n                    }\\n                },\\n                \"output\": {\\n                    \"poses\": {\\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\\n                        \"overwrite\": false\\n                    },\\n                    \"scores\": {\\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\\n                        \"overwrite\": false\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\\n'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 15:51:13,412 DEBUG  "I read the docking_example.jsonc file, which contained settings for docking, ligand preparation, and docking runs. The file specified paths for log files, embedded ligands, receptor PDBQT format file, docked ligands, and docking scores. It also included parameters for parallelization, seed, and search space."
+2023-06-03 15:51:13,419 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:51:04 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI read the docking_example.jsonc file, which contained settings for docking, ligand preparation, and docking runs. The file specified paths for log files, embedded ligands, receptor PDBQT format file, docked ligands, and docking scores. It also included parameters for parallelization, seed, and search space."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to run the target protein preparation command to get the log file containing the search space parameters.\",\n        \"reasoning\": \"The target protein preparation log file will provide the necessary information to update the docking setting json file.\",\n        \"plan\": \"- Run target protein preparation\\n- Read the log file\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will run the target protein preparation command to get the log file containing the search space parameters.\"\n    },\n    \"command\": {\n        \"name\": \"target_protein_preparation\",\n        \"args\": {\n            \"setting_json\": \"/workspace/Auto-GPT/tutorial/target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command target_protein_preparation returned: Error: 'NoneType' object has no attribute 'decode'"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the target protein preparation log file to get the search space parameters.\",\n        \"reasoning\": \"The target protein preparation log file will provide the necessary information to update the docking setting json file.\",\n        \"plan\": \"- Read the target protein preparation log file\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the target protein preparation log file to get the search space parameters.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: 2023-05-30 13:26:14 - DockStream version used: 1.0.0\n2023-05-30 13:26:14 - Could not load CCDC / Gold docker - if another backend is being used, you can safely ignore this warning. The exception message reads: No module named 'ccdc'\n2023-05-30 13:26:14 - Starting generation of pool RDkit.\n2023-05-30 13:26:14 - Completed construction of pool RDkit.\n2023-05-30 13:26:14 - Starting docking run AutoDockVina.\n2023-05-30 13:29:43 - |█████████████████------------------------------------------------| 26.7% \n2023-05-30 13:33:15 - |██████████████████████████████████-------------------------------| 53.3% \n2023-05-30 13:36:42 - |████████████████████████████████████████████████████-------------| 80.0% \n2023-05-30 13:39:15 - |█████████████████████████████████████████████████████████████████| 100.0% \n2023-05-30 13:39:15 - Completed docking run AutoDockVina.\n"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.763\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:52:16,286 INFO GPT4 Only Mode:  ENABLED
+2023-06-03 15:52:16,443 INFO Using AI Settings File: ai_settings_230603_3.yaml
+2023-06-03 15:52:16,647 INFO NEWS: Welcome to Auto-GPT!
+2023-06-03 15:52:16,648 INFO NEWS: Below you'll find the latest Auto-GPT News and updates regarding features!
+2023-06-03 15:52:16,649 INFO NEWS: If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag.
+2023-06-03 15:52:16,650 INFO NEWS: 
+2023-06-03 15:52:16,653 INFO NEWS: Website and Documentation Site 📰📖
+2023-06-03 15:52:16,655 INFO NEWS: Check out https://agpt.co, the official news & updates site for Auto-GPT!
+2023-06-03 15:52:16,656 INFO NEWS: The documentation also has a place here, at https://docs.agpt.co
+2023-06-03 15:52:16,657 INFO NEWS: 
+2023-06-03 15:52:16,659 INFO NEWS: For contributors 👷🏼
+2023-06-03 15:52:16,661 INFO NEWS: Since releasing v0.3.0, we are working on re-architecting the Auto-GPT core to make
+2023-06-03 15:52:16,662 INFO NEWS: it more extensible and to make room for structural performance-oriented R&D.
+2023-06-03 15:52:16,664 INFO NEWS: In the meantime, we have less time to process incoming pull requests and issues,
+2023-06-03 15:52:16,666 INFO NEWS: so we focus on high-value contributions:
+2023-06-03 15:52:16,668 INFO NEWS:  * significant bugfixes
+2023-06-03 15:52:16,672 INFO NEWS:   major* improvements to existing functionality and/or docs (so no single-typo fixes)
+2023-06-03 15:52:16,675 INFO NEWS:  * contributions that help us with re-architecture and other roadmapped items
+2023-06-03 15:52:16,677 INFO NEWS: We have to be somewhat selective in order to keep making progress, but this does not
+2023-06-03 15:52:16,679 INFO NEWS: mean you can't contribute. Check out the contribution guide on our wiki:
+2023-06-03 15:52:16,681 INFO NEWS: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing
+2023-06-03 15:52:16,683 INFO NEWS: 
+2023-06-03 15:52:16,685 INFO NEWS: 🚀 v0.3.1 Release 🚀
+2023-06-03 15:52:16,686 INFO NEWS: Over a week and 47 pull requests have passed since v0.3.0, and we are happy to announce
+2023-06-03 15:52:16,688 INFO NEWS: the release of v0.3.1!
+2023-06-03 15:52:16,691 INFO NEWS: 
+2023-06-03 15:52:16,692 INFO NEWS: Highlights and notable changes since v0.2.2:
+2023-06-03 15:52:16,694 INFO NEWS: 
+2023-06-03 15:52:16,696 INFO NEWS: Changes to Docker configuration 🐋
+2023-06-03 15:52:16,697 INFO NEWS:   The workdir has been changed from /home/appuser to /app*.
+2023-06-03 15:52:16,699 INFO NEWS:     Be sure to update any volume mounts accordingly!
+2023-06-03 15:52:16,700 INFO NEWS:  * Docker-compose 1.29.0 is now required.
+2023-06-03 15:52:16,702 INFO NEWS: 
+2023-06-03 15:52:16,704 INFO NEWS: Logging 🧾
+2023-06-03 15:52:16,707 INFO NEWS:  * Log functionality has been improved for better understanding
+2023-06-03 15:52:16,709 INFO NEWS:     and easier summarization.
+2023-06-03 15:52:16,711 INFO NEWS:  * All LLM interactions are now logged to logs/DEBUG, to help with
+2023-06-03 15:52:16,714 INFO NEWS:     debugging and development.
+2023-06-03 15:52:16,716 INFO NEWS: 
+2023-06-03 15:52:16,717 INFO NEWS: Other
+2023-06-03 15:52:16,720 INFO NEWS:  * Edge browser is now supported by the `browse_website` command.
+2023-06-03 15:52:16,722 INFO NEWS:  * Sets of commands can now be disabled using DISABLED_COMMAND_CATEGORIES in .env.
+2023-06-03 15:52:16,724 INFO NEWS: 
+2023-06-03 15:52:16,726 INFO NEWS: ⚠️ Command `send_tweet` is REMOVED
+2023-06-03 15:52:16,728 INFO NEWS: Twitter functionality (and more) is now covered by plugins, see [Plugin support 🔌]
+2023-06-03 15:52:16,731 INFO NEWS: 
+2023-06-03 15:52:16,732 INFO NEWS: Plugin support 🔌
+2023-06-03 15:52:16,734 INFO NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities,
+2023-06-03 15:52:16,737 INFO NEWS: adding support for third-party services and more.
+2023-06-03 15:52:16,740 INFO NEWS: See https://github.com/Significant-Gravitas/Auto-GPT-Plugins for instructions and
+2023-06-03 15:52:16,742 INFO NEWS: available plugins. Specific plugins can be allowlisted/denylisted in .env.
+2023-06-03 15:52:16,744 INFO NEWS: 
+2023-06-03 15:52:16,746 INFO NEWS: Memory backend deprecation ⚠️
+2023-06-03 15:52:16,748 INFO NEWS: The Milvus, Pinecone and Weaviate memory backends were rendered incompatible
+2023-06-03 15:52:16,750 INFO NEWS: by work on the memory system, and have been removed in `master`. The Redis
+2023-06-03 15:52:16,752 INFO NEWS: memory store was also temporarily removed but we aim to merge a new implementation
+2023-06-03 15:52:16,754 INFO NEWS: before the next release.
+2023-06-03 15:52:16,756 INFO NEWS: Whether built-in support for the others will be added back in the future is subject to
+2023-06-03 15:52:16,758 INFO NEWS: discussion, feel free to pitch in: https://github.com/Significant-Gravitas/Auto-GPT/discussions/4280
+2023-06-03 15:52:16,760 INFO NEWS: 
+2023-06-03 15:52:16,763 INFO NEWS: Challenge Workflow 🏆
+2023-06-03 15:52:16,765 INFO NEWS: If you have been working on challenges... Thank You!
+2023-06-03 15:52:16,767 INFO NEWS: But to run the debugger challenge or other challenges using cassettes and VCR in docker, You will now need to `pip uninstall vcrpy` and `pip install -r requirements.txt` again.
+2023-06-03 15:52:16,770 INFO NEWS: This will install a new version of vcrpy that is compatible with running vcr in docker.
+2023-06-03 15:52:16,772 INFO NEWS: This workflow will be fixed as soon as the maintainer from VCRpy merges our changes.
+2023-06-03 15:52:16,774 INFO NEWS: 
+2023-06-03 15:52:19,898 INFO  
+Plugins found: 1
+--------------------
+2023-06-03 15:52:19,899 INFO  Auto-GPT-Chemoinformatics-plugin: 0.1.0 - This is the Auto-GPT chemoinformatics plugin.
+2023-06-03 15:52:20,007 INFO Name : Hoshino AI
+2023-06-03 15:52:20,172 INFO Role : Medicinal Chemist and Chemoinformatician
+2023-06-03 15:52:20,373 INFO Goals: ['Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein', 'Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file 8gcy_target_prep.log. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.', 'Shutdown when task is done.']
+2023-06-03 15:52:21,033 INFO API Budget: $3.0
+2023-06-03 15:52:21,143 INFO Hoshino AI has been created with the following details:
+2023-06-03 15:52:21,393 INFO Name: Hoshino AI
+2023-06-03 15:52:21,504 INFO Role: Medicinal Chemist and Chemoinformatician
+2023-06-03 15:52:21,657 INFO Goals: 
+2023-06-03 15:52:21,720 INFO - Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein
+2023-06-03 15:52:22,089 INFO - Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file 8gcy_target_prep.log. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.
+2023-06-03 15:52:22,667 INFO - Shutdown when task is done.
+2023-06-03 15:52:22,865 INFO Using memory of type: LocalCache
+2023-06-03 15:52:23,007 INFO Using Browser: chrome
+2023-06-03 15:52:23,177 DEBUG  []
+2023-06-03 15:52:23,636 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file 8gcy_target_prep.log. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:52:23 2023"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $3.000\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:52:41,516 INFO  THOUGHTS: I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.
+2023-06-03 15:52:41,932 INFO REASONING: Reading the example file will provide me with the necessary information to create the docking setting json.
+2023-06-03 15:52:42,274 INFO PLAN: 
+2023-06-03 15:52:42,352 INFO -  Read docking_example.jsonc
+2023-06-03 15:52:42,501 INFO -  Update the setting json file
+2023-06-03 15:52:42,692 INFO -  Output the file as docking_setting.json
+2023-06-03 15:52:42,836 INFO -  Shutdown when task is done
+2023-06-03 15:52:42,996 INFO CRITICISM: None
+2023-06-03 15:52:43,107 DEBUG  {
+    "thoughts": {
+        "text": "I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.",
+        "reasoning": "Reading the example file will provide me with the necessary information to create the docking setting json.",
+        "plan": "- Read docking_example.jsonc\n- Update the setting json file\n- Output the file as docking_setting.json\n- Shutdown when task is done",
+        "criticism": "None",
+        "speak": "I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein."
+    },
+    "command": {
+        "name": "read_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_example.jsonc"
+        }
+    }
+}
+2023-06-03 15:52:43,112 INFO NEXT ACTION:  COMMAND = read_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_example.jsonc'}
+2023-06-03 15:52:43,361 INFO  Enter 'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands, 'n' to exit program, or enter feedback for ...
+2023-06-03 15:52:43,363 INFO  Asking user via keyboard...
+2023-06-03 15:53:04,935 INFO -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-= 
+2023-06-03 15:53:05,141 INFO SYSTEM:  Command read_file returned: {
+    "docking": { // general settings
+        "header": {
+            "logging": { // logging settings (e.g. which file to write to)
+                "logfile": "/workspace/Auto-GPT/tutorial/ADV_docking.log"
+            }
+        },
+        "ligand_preparation": { // the ligand preparation part, defines how to build the pool
+            "embedding_pools": [
+                {
+                    "pool_id": "RDkit", // fixed
+                    "type": "RDkit", // fiexed
+                    "parameters": {
+                        "prefix_execution": "" // only required, if a module needs to be loaded to execute "Corina"
+                    },
+                    "input": {
+                        "standardize_smiles": false,
+                        "type": "console" // fixed
+                    },
+                    "output": { // the conformers can be written to a file, but "output" is not required as the ligands are forwarded internally
+                        "conformer_path": "/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf",
+                        "format": "sdf"
+                    }
+                }
+            ]
+        },
+        "docking_runs": [
+            {
+                "backend": "AutoDockVina",
+                "run_id": "AutoDockVina",
+                "input_pools": [
+                    "RDkit"
+                ],
+                "parameters": {
+                    "binary_location": "/home/vscode/micromamba/envs/DockStream/bin/", // fixed
+                    "parallelization": {
+                        "number_cores": 6 // fixed
+                    },
+                    "seed": 42, // use this "seed" to generate reproducible results; if varied, slightly different results will be produced
+                    "receptor_pdbqt_path": [
+                        "/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt" // target receptor PDBQT format file created by target protein preparation command
+                    ],
+                    "number_poses": 10, // number of poses to be generated
+                    "search_space": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file
+                        "--center_x": 0,
+                        "--center_y": 0,
+                        "--center_z": 0,
+                        "--size_x": 0,
+                        "--size_y": 0,
+                        "--size_z": 0
+                    }
+                },
+                "output": {
+                    "poses": {
+                        "poses_path": "/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf",
+                        "overwrite": false
+                    },
+                    "scores": {
+                        "scores_path": "/workspace/Auto-GPT/tutorial/ADV_scores.csv",
+                        "overwrite": false
+                    }
+                }
+            }
+        ]
+    }
+}
+
+2023-06-03 15:53:05,751 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the example file will provide me with the necessary information to create the docking setting json.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    }
+]
+2023-06-03 15:53:05,768 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\nI was created.\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:53:08,005 DEBUG  "I was created. Nothing new happened."
+2023-06-03 15:53:08,026 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file 8gcy_target_prep.log. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:53:05 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI was created. Nothing new happened."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the example file will provide me with the necessary information to create the docking setting json.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.949\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:53:23,575 INFO  THOUGHTS: I need to read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.
+2023-06-03 15:53:24,034 INFO REASONING: Reading the log file will provide me with the information needed to update the docking setting json with the correct parameters.
+2023-06-03 15:53:24,449 INFO PLAN: 
+2023-06-03 15:53:24,511 INFO -  Read 8gcy_target_prep.log
+2023-06-03 15:53:24,659 INFO -  Update the setting json file
+2023-06-03 15:53:24,875 INFO -  Output the file as docking_setting.json
+2023-06-03 15:53:25,076 INFO -  Shutdown when task is done
+2023-06-03 15:53:25,274 INFO CRITICISM: None
+2023-06-03 15:53:25,354 DEBUG  {
+    "thoughts": {
+        "text": "I need to read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.",
+        "reasoning": "Reading the log file will provide me with the information needed to update the docking setting json with the correct parameters.",
+        "plan": "- Read 8gcy_target_prep.log\n- Update the setting json file\n- Output the file as docking_setting.json\n- Shutdown when task is done",
+        "criticism": "None",
+        "speak": "I will read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json."
+    },
+    "command": {
+        "name": "read_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/8gcy_target_prep.log"
+        }
+    }
+}
+2023-06-03 15:53:25,362 INFO NEXT ACTION:  COMMAND = read_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/8gcy_target_prep.log'}
+2023-06-03 15:53:25,590 INFO [36mAUTHORISED COMMANDS LEFT: [0m4 
+2023-06-03 15:53:25,735 INFO SYSTEM:  Command read_file returned: 2023-06-03 15:28:10 - DockStream version used: 1.0.0
+2023-06-03 15:28:11 - Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2023-06-03 15:28:18 - Started preparation run number 0.
+2023-06-03 15:28:18 - In specify_cavity
+2023-06-03 15:28:19 - In _export_as_pdb2pdbqt
+2023-06-03 15:28:19 - In _export_as_pdb2pdbqt argument=['/tmp/tmp7p9jjwnm.pdb', '-opdbqt', '-O8gcy_receptor.pdbqt', '-xr', '-p', 7.4, '--partialcharge', 'gasteiger']
+2023-06-03 15:28:24 - Ligand from file Z3N.pdb has the following dimensions:
+X coordinates: min=-4.67, max=8.59, mean=2.21
+Y coordinates: min=4.02, max=12.84, mean=8.41
+Z coordinates: min=13.81, max=23.18, mean=18.57
+2023-06-03 15:28:24 - In elif AUTODOCKVINA
+2023-06-03 15:28:24 - Wrote AutoDock Vina target to file 8gcy_receptor.pdbqt.
+2023-06-03 15:28:24 - Completed target preparation run number 0.
+
+2023-06-03 15:53:26,431 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the example file will provide me with the necessary information to create the docking setting json.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\",\n        \"reasoning\": \"Reading the log file will provide me with the information needed to update the docking setting json with the correct parameters.\",\n        \"plan\": \"- Read 8gcy_target_prep.log\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"8gcy_target_prep.log\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: 2023-06-03 15:28:10 - DockStream version used: 1.0.0\n2023-06-03 15:28:11 - Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.\n2023-06-03 15:28:18 - Started preparation run number 0.\n2023-06-03 15:28:18 - In specify_cavity\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt argument=['/tmp/tmp7p9jjwnm.pdb', '-opdbqt', '-O8gcy_receptor.pdbqt', '-xr', '-p', 7.4, '--partialcharge', 'gasteiger']\n2023-06-03 15:28:24 - Ligand from file Z3N.pdb has the following dimensions:\nX coordinates: min=-4.67, max=8.59, mean=2.21\nY coordinates: min=4.02, max=12.84, mean=8.41\nZ coordinates: min=13.81, max=23.18, mean=18.57\n2023-06-03 15:28:24 - In elif AUTODOCKVINA\n2023-06-03 15:28:24 - Wrote AutoDock Vina target to file 8gcy_receptor.pdbqt.\n2023-06-03 15:28:24 - Completed target preparation run number 0.\n"
+    }
+]
+2023-06-03 15:53:26,485 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nI was created. Nothing new happened.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'you', 'content': '{\"command\": {\"name\": \"read_file\", \"args\": {\"filename\": \"docking_example.jsonc\"}}}'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 15:53:30,343 DEBUG  "This reminds you of these events from your past: \nI was created. I read the \"docking_example.jsonc\" file. Nothing new happened."
+2023-06-03 15:53:30,350 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file 8gcy_target_prep.log. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:53:26 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nThis reminds you of these events from your past: \nI was created. I read the \"docking_example.jsonc\" file. Nothing new happened."
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\",\n        \"reasoning\": \"Reading the log file will provide me with the information needed to update the docking setting json with the correct parameters.\",\n        \"plan\": \"- Read 8gcy_target_prep.log\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"8gcy_target_prep.log\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: 2023-06-03 15:28:10 - DockStream version used: 1.0.0\n2023-06-03 15:28:11 - Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.\n2023-06-03 15:28:18 - Started preparation run number 0.\n2023-06-03 15:28:18 - In specify_cavity\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt argument=['/tmp/tmp7p9jjwnm.pdb', '-opdbqt', '-O8gcy_receptor.pdbqt', '-xr', '-p', 7.4, '--partialcharge', 'gasteiger']\n2023-06-03 15:28:24 - Ligand from file Z3N.pdb has the following dimensions:\nX coordinates: min=-4.67, max=8.59, mean=2.21\nY coordinates: min=4.02, max=12.84, mean=8.41\nZ coordinates: min=13.81, max=23.18, mean=18.57\n2023-06-03 15:28:24 - In elif AUTODOCKVINA\n2023-06-03 15:28:24 - Wrote AutoDock Vina target to file 8gcy_receptor.pdbqt.\n2023-06-03 15:28:24 - Completed target preparation run number 0.\n"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.870\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:54:40,169 INFO  THOUGHTS: I will update the docking setting json with the parameters from the 8gcy_target_prep.log file.
+2023-06-03 15:54:40,558 INFO REASONING: The log file contains the necessary information to update the docking setting json with the correct parameters.
+2023-06-03 15:54:40,889 INFO PLAN: 
+2023-06-03 15:54:40,971 INFO -  Update the setting json file
+2023-06-03 15:54:41,206 INFO -  Output the file as docking_setting.json
+2023-06-03 15:54:41,338 INFO -  Shutdown when task is done
+2023-06-03 15:54:41,553 INFO CRITICISM: None
+2023-06-03 15:54:41,695 DEBUG  {
+    "thoughts": {
+        "text": "I will update the docking setting json with the parameters from the 8gcy_target_prep.log file.",
+        "reasoning": "The log file contains the necessary information to update the docking setting json with the correct parameters.",
+        "plan": "- Update the setting json file\n- Output the file as docking_setting.json\n- Shutdown when task is done",
+        "criticism": "None",
+        "speak": "I will update the docking setting json with the parameters from the 8gcy_target_prep.log file."
+    },
+    "command": {
+        "name": "write_to_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json",
+            "text": "{\n    \"docking\": {\n        \"header\": {\n            \"logging\": {\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": {\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\",\n                    \"type\": \"RDkit\",\n                    \"parameters\": {\n                        \"prefix_execution\": \"\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\"\n                    },\n                    \"output\": {\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\",\n                    \"parallelization\": {\n                        \"number_cores\": 6\n                    },\n                    \"seed\": 42,\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/8gcy_receptor.pdbqt\"\n                    ],\n                    \"number_poses\": 10,\n                    \"search_space\": {\n                        \"--center_x\": 2.21,\n                        \"--center_y\": 8.41,\n                        \"--center_z\": 18.57,\n                        \"--size_x\": 14,\n                        \"--size_y\": 9,\n                        \"--size_z\": 10\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}"
+        }
+    }
+}
+2023-06-03 15:54:41,709 INFO NEXT ACTION:  COMMAND = write_to_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json', 'text': '{\n    "docking": {\n        "header": {\n            "logging": {\n                "logfile": "/workspace/Auto-GPT/tutorial/ADV_docking.log"\n            }\n        },\n        "ligand_preparation": {\n            "embedding_pools": [\n                {\n                    "pool_id": "RDkit",\n                    "type": "RDkit",\n                    "parameters": {\n                        "prefix_execution": ""\n                    },\n                    "input": {\n                        "standardize_smiles": false,\n                        "type": "console"\n                    },\n                    "output": {\n                        "conformer_path": "/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf",\n                        "format": "sdf"\n                    }\n                }\n            ]\n        },\n        "docking_runs": [\n            {\n                "backend": "AutoDockVina",\n                "run_id": "AutoDockVina",\n                "input_pools": [\n                    "RDkit"\n                ],\n                "parameters": {\n                    "binary_location": "/home/vscode/micromamba/envs/DockStream/bin/",\n                    "parallelization": {\n                        "number_cores": 6\n                    },\n                    "seed": 42,\n                    "receptor_pdbqt_path": [\n                        "/workspace/Auto-GPT/tutorial/8gcy_receptor.pdbqt"\n                    ],\n                    "number_poses": 10,\n                    "search_space": {\n                        "--center_x": 2.21,\n                        "--center_y": 8.41,\n                        "--center_z": 18.57,\n                        "--size_x": 14,\n                        "--size_y": 9,\n                        "--size_z": 10\n                    }\n                },\n                "output": {\n                    "poses": {\n                        "poses_path": "/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf",\n                        "overwrite": false\n                    },\n                    "scores": {\n                        "scores_path": "/workspace/Auto-GPT/tutorial/ADV_scores.csv",\n                        "overwrite": false\n                    }\n                }\n            }\n        ]\n    }\n}'}
+2023-06-03 15:54:42,397 INFO [36mAUTHORISED COMMANDS LEFT: [0m3 
+2023-06-03 15:54:42,616 INFO SYSTEM:  Command write_to_file returned: File written to successfully.
+2023-06-03 15:54:42,925 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\",\n        \"reasoning\": \"Reading the example file will provide me with the necessary information to create the docking setting json.\",\n        \"plan\": \"- Read docking_example.jsonc\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the docking_example.jsonc file to understand how to output the setting json for running docking ligand compound and target protein.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"docking_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"docking\": { // general settings\n        \"header\": {\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\n            }\n        },\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\n            \"embedding_pools\": [\n                {\n                    \"pool_id\": \"RDkit\", // fixed\n                    \"type\": \"RDkit\", // fiexed\n                    \"parameters\": {\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\n                    },\n                    \"input\": {\n                        \"standardize_smiles\": false,\n                        \"type\": \"console\" // fixed\n                    },\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\n                        \"format\": \"sdf\"\n                    }\n                }\n            ]\n        },\n        \"docking_runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"run_id\": \"AutoDockVina\",\n                \"input_pools\": [\n                    \"RDkit\"\n                ],\n                \"parameters\": {\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\n                    \"parallelization\": {\n                        \"number_cores\": 6 // fixed\n                    },\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\n                    \"receptor_pdbqt_path\": [\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\n                    ],\n                    \"number_poses\": 10, // number of poses to be generated\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\n                        \"--center_x\": 0,\n                        \"--center_y\": 0,\n                        \"--center_z\": 0,\n                        \"--size_x\": 0,\n                        \"--size_y\": 0,\n                        \"--size_z\": 0\n                    }\n                },\n                \"output\": {\n                    \"poses\": {\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\n                        \"overwrite\": false\n                    },\n                    \"scores\": {\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\n                        \"overwrite\": false\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\",\n        \"reasoning\": \"Reading the log file will provide me with the information needed to update the docking setting json with the correct parameters.\",\n        \"plan\": \"- Read 8gcy_target_prep.log\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"8gcy_target_prep.log\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: 2023-06-03 15:28:10 - DockStream version used: 1.0.0\n2023-06-03 15:28:11 - Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.\n2023-06-03 15:28:18 - Started preparation run number 0.\n2023-06-03 15:28:18 - In specify_cavity\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt argument=['/tmp/tmp7p9jjwnm.pdb', '-opdbqt', '-O8gcy_receptor.pdbqt', '-xr', '-p', 7.4, '--partialcharge', 'gasteiger']\n2023-06-03 15:28:24 - Ligand from file Z3N.pdb has the following dimensions:\nX coordinates: min=-4.67, max=8.59, mean=2.21\nY coordinates: min=4.02, max=12.84, mean=8.41\nZ coordinates: min=13.81, max=23.18, mean=18.57\n2023-06-03 15:28:24 - In elif AUTODOCKVINA\n2023-06-03 15:28:24 - Wrote AutoDock Vina target to file 8gcy_receptor.pdbqt.\n2023-06-03 15:28:24 - Completed target preparation run number 0.\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I will update the docking setting json with the parameters from the 8gcy_target_prep.log file.\",\n        \"reasoning\": \"The log file contains the necessary information to update the docking setting json with the correct parameters.\",\n        \"plan\": \"- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will update the docking setting json with the parameters from the 8gcy_target_prep.log file.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"docking_setting.json\",\n            \"text\": \"{\\n    \\\"docking\\\": {\\n        \\\"header\\\": {\\n            \\\"logging\\\": {\\n                \\\"logfile\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_docking.log\\\"\\n            }\\n        },\\n        \\\"ligand_preparation\\\": {\\n            \\\"embedding_pools\\\": [\\n                {\\n                    \\\"pool_id\\\": \\\"RDkit\\\",\\n                    \\\"type\\\": \\\"RDkit\\\",\\n                    \\\"parameters\\\": {\\n                        \\\"prefix_execution\\\": \\\"\\\"\\n                    },\\n                    \\\"input\\\": {\\n                        \\\"standardize_smiles\\\": false,\\n                        \\\"type\\\": \\\"console\\\"\\n                    },\\n                    \\\"output\\\": {\\n                        \\\"conformer_path\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\\\",\\n                        \\\"format\\\": \\\"sdf\\\"\\n                    }\\n                }\\n            ]\\n        },\\n        \\\"docking_runs\\\": [\\n            {\\n                \\\"backend\\\": \\\"AutoDockVina\\\",\\n                \\\"run_id\\\": \\\"AutoDockVina\\\",\\n                \\\"input_pools\\\": [\\n                    \\\"RDkit\\\"\\n                ],\\n                \\\"parameters\\\": {\\n                    \\\"binary_location\\\": \\\"/home/vscode/micromamba/envs/DockStream/bin/\\\",\\n                    \\\"parallelization\\\": {\\n                        \\\"number_cores\\\": 6\\n                    },\\n                    \\\"seed\\\": 42,\\n                    \\\"receptor_pdbqt_path\\\": [\\n                        \\\"/workspace/Auto-GPT/tutorial/8gcy_receptor.pdbqt\\\"\\n                    ],\\n                    \\\"number_poses\\\": 10,\\n                    \\\"search_space\\\": {\\n                        \\\"--center_x\\\": 2.21,\\n                        \\\"--center_y\\\": 8.41,\\n                        \\\"--center_z\\\": 18.57,\\n                        \\\"--size_x\\\": 14,\\n                        \\\"--size_y\\\": 9,\\n                        \\\"--size_z\\\": 10\\n                    }\\n                },\\n                \\\"output\\\": {\\n                    \\\"poses\\\": {\\n                        \\\"poses_path\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\\\",\\n                        \\\"overwrite\\\": false\\n                    },\\n                    \\\"scores\\\": {\\n                        \\\"scores_path\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_scores.csv\\\",\\n                        \\\"overwrite\\\": false\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    }
+]
+2023-06-03 15:54:43,010 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nThis reminds you of these events from your past: \\nI was created. I read the \"docking_example.jsonc\" file. Nothing new happened.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'your computer', 'content': 'Command read_file returned: {\\n    \"docking\": { // general settings\\n        \"header\": {\\n            \"logging\": { // logging settings (e.g. which file to write to)\\n                \"logfile\": \"/workspace/Auto-GPT/tutorial/ADV_docking.log\"\\n            }\\n        },\\n        \"ligand_preparation\": { // the ligand preparation part, defines how to build the pool\\n            \"embedding_pools\": [\\n                {\\n                    \"pool_id\": \"RDkit\", // fixed\\n                    \"type\": \"RDkit\", // fiexed\\n                    \"parameters\": {\\n                        \"prefix_execution\": \"\" // only required, if a module needs to be loaded to execute \"Corina\"\\n                    },\\n                    \"input\": {\\n                        \"standardize_smiles\": false,\\n                        \"type\": \"console\" // fixed\\n                    },\\n                    \"output\": { // the conformers can be written to a file, but \"output\" is not required as the ligands are forwarded internally\\n                        \"conformer_path\": \"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\",\\n                        \"format\": \"sdf\"\\n                    }\\n                }\\n            ]\\n        },\\n        \"docking_runs\": [\\n            {\\n                \"backend\": \"AutoDockVina\",\\n                \"run_id\": \"AutoDockVina\",\\n                \"input_pools\": [\\n                    \"RDkit\"\\n                ],\\n                \"parameters\": {\\n                    \"binary_location\": \"/home/vscode/micromamba/envs/DockStream/bin/\", // fixed\\n                    \"parallelization\": {\\n                        \"number_cores\": 6 // fixed\\n                    },\\n                    \"seed\": 42, // use this \"seed\" to generate reproducible results; if varied, slightly different results will be produced\\n                    \"receptor_pdbqt_path\": [\\n                        \"/workspace/Auto-GPT/tutorial/ADV_receptor.pdbqt\" // target receptor PDBQT format file created by target protein preparation command\\n                    ],\\n                    \"number_poses\": 10, // number of poses to be generated\\n                    \"search_space\": { // search space (cavity definition). So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file\\n                        \"--center_x\": 0,\\n                        \"--center_y\": 0,\\n                        \"--center_z\": 0,\\n                        \"--size_x\": 0,\\n                        \"--size_y\": 0,\\n                        \"--size_z\": 0\\n                    }\\n                },\\n                \"output\": {\\n                    \"poses\": {\\n                        \"poses_path\": \"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\",\\n                        \"overwrite\": false\\n                    },\\n                    \"scores\": {\\n                        \"scores_path\": \"/workspace/Auto-GPT/tutorial/ADV_scores.csv\",\\n                        \"overwrite\": false\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\\n'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 15:54:50,031 DEBUG  "I read the \"docking_example.jsonc\" file and found general settings, ligand preparation settings, and docking run settings. The file contained information about logging, embedding pools, input and output paths, backend, parameters, and search space."
+2023-06-03 15:54:50,040 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Read docking_example.jsonc to know how to output setting json to run docking ligand compound and target protein\n2. Update the setting json file to use the 8gcy_receptor.pdbqt created in target protein preparation and that log file 8gcy_target_prep.log. So you must assign `--center_x`, `--center_y`, `--center_z`, `--size_x`, `--size_y`, `--size_z` parameters in docking setting json with reference to target protein preparation log file. Each size parameter should be rounded up or otherwise margined after subtracting the min value from the max value. Output the file as docking_setting.json.\n3. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:54:42 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI read the \"docking_example.jsonc\" file and found general settings, ligand preparation settings, and docking run settings. The file contained information about logging, embedding pools, input and output paths, backend, parameters, and search space."
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\",\n        \"reasoning\": \"Reading the log file will provide me with the information needed to update the docking setting json with the correct parameters.\",\n        \"plan\": \"- Read 8gcy_target_prep.log\\n- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will read the 8gcy_target_prep.log file to get the necessary parameters for the docking setting json.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"8gcy_target_prep.log\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: 2023-06-03 15:28:10 - DockStream version used: 1.0.0\n2023-06-03 15:28:11 - Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.\n2023-06-03 15:28:18 - Started preparation run number 0.\n2023-06-03 15:28:18 - In specify_cavity\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt\n2023-06-03 15:28:19 - In _export_as_pdb2pdbqt argument=['/tmp/tmp7p9jjwnm.pdb', '-opdbqt', '-O8gcy_receptor.pdbqt', '-xr', '-p', 7.4, '--partialcharge', 'gasteiger']\n2023-06-03 15:28:24 - Ligand from file Z3N.pdb has the following dimensions:\nX coordinates: min=-4.67, max=8.59, mean=2.21\nY coordinates: min=4.02, max=12.84, mean=8.41\nZ coordinates: min=13.81, max=23.18, mean=18.57\n2023-06-03 15:28:24 - In elif AUTODOCKVINA\n2023-06-03 15:28:24 - Wrote AutoDock Vina target to file 8gcy_receptor.pdbqt.\n2023-06-03 15:28:24 - Completed target preparation run number 0.\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I will update the docking setting json with the parameters from the 8gcy_target_prep.log file.\",\n        \"reasoning\": \"The log file contains the necessary information to update the docking setting json with the correct parameters.\",\n        \"plan\": \"- Update the setting json file\\n- Output the file as docking_setting.json\\n- Shutdown when task is done\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will update the docking setting json with the parameters from the 8gcy_target_prep.log file.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"docking_setting.json\",\n            \"text\": \"{\\n    \\\"docking\\\": {\\n        \\\"header\\\": {\\n            \\\"logging\\\": {\\n                \\\"logfile\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_docking.log\\\"\\n            }\\n        },\\n        \\\"ligand_preparation\\\": {\\n            \\\"embedding_pools\\\": [\\n                {\\n                    \\\"pool_id\\\": \\\"RDkit\\\",\\n                    \\\"type\\\": \\\"RDkit\\\",\\n                    \\\"parameters\\\": {\\n                        \\\"prefix_execution\\\": \\\"\\\"\\n                    },\\n                    \\\"input\\\": {\\n                        \\\"standardize_smiles\\\": false,\\n                        \\\"type\\\": \\\"console\\\"\\n                    },\\n                    \\\"output\\\": {\\n                        \\\"conformer_path\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_embedded_ligands.sdf\\\",\\n                        \\\"format\\\": \\\"sdf\\\"\\n                    }\\n                }\\n            ]\\n        },\\n        \\\"docking_runs\\\": [\\n            {\\n                \\\"backend\\\": \\\"AutoDockVina\\\",\\n                \\\"run_id\\\": \\\"AutoDockVina\\\",\\n                \\\"input_pools\\\": [\\n                    \\\"RDkit\\\"\\n                ],\\n                \\\"parameters\\\": {\\n                    \\\"binary_location\\\": \\\"/home/vscode/micromamba/envs/DockStream/bin/\\\",\\n                    \\\"parallelization\\\": {\\n                        \\\"number_cores\\\": 6\\n                    },\\n                    \\\"seed\\\": 42,\\n                    \\\"receptor_pdbqt_path\\\": [\\n                        \\\"/workspace/Auto-GPT/tutorial/8gcy_receptor.pdbqt\\\"\\n                    ],\\n                    \\\"number_poses\\\": 10,\\n                    \\\"search_space\\\": {\\n                        \\\"--center_x\\\": 2.21,\\n                        \\\"--center_y\\\": 8.41,\\n                        \\\"--center_z\\\": 18.57,\\n                        \\\"--size_x\\\": 14,\\n                        \\\"--size_y\\\": 9,\\n                        \\\"--size_z\\\": 10\\n                    }\\n                },\\n                \\\"output\\\": {\\n                    \\\"poses\\\": {\\n                        \\\"poses_path\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_ligands_docked.sdf\\\",\\n                        \\\"overwrite\\\": false\\n                    },\\n                    \\\"scores\\\": {\\n                        \\\"scores_path\\\": \\\"/workspace/Auto-GPT/tutorial/ADV_scores.csv\\\",\\n                        \\\"overwrite\\\": false\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.728\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:55:04,193 INFO  THOUGHTS: I have updated the docking setting json file. Now, I will shut down.
+2023-06-03 15:55:04,546 INFO REASONING: The task is complete, and there is no further action required.
+2023-06-03 15:55:04,833 INFO PLAN: 
+2023-06-03 15:55:04,888 INFO -  Shutdown
+2023-06-03 15:55:04,974 INFO CRITICISM: None
+2023-06-03 15:55:05,072 DEBUG  {
+    "thoughts": {
+        "text": "I have updated the docking setting json file. Now, I will shut down.",
+        "reasoning": "The task is complete, and there is no further action required.",
+        "plan": "- Shutdown",
+        "criticism": "None",
+        "speak": "I have updated the docking setting json file. Now, I will shut down."
+    },
+    "command": {
+        "name": "task_complete",
+        "args": {
+            "reason": "Task completed successfully"
+        }
+    }
+}
+2023-06-03 15:55:05,089 INFO NEXT ACTION:  COMMAND = task_complete  ARGUMENTS = {'reason': 'Task completed successfully'}
+2023-06-03 15:55:05,392 INFO [36mAUTHORISED COMMANDS LEFT: [0m2 
+2023-06-03 15:55:05,525 INFO Shutting down...
+ Task completed successfully

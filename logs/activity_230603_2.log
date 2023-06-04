@@ -1,0 +1,876 @@
+2023-06-03 15:23:01,348 INFO GPT4 Only Mode:  ENABLED
+2023-06-03 15:23:01,519 INFO Using AI Settings File: ai_settings_230603_2.yaml
+2023-06-03 15:23:01,732 INFO NEWS: Welcome to Auto-GPT!
+2023-06-03 15:23:01,734 INFO NEWS: Below you'll find the latest Auto-GPT News and updates regarding features!
+2023-06-03 15:23:01,736 INFO NEWS: If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag.
+2023-06-03 15:23:01,743 INFO NEWS: 
+2023-06-03 15:23:01,745 INFO NEWS: Website and Documentation Site 📰📖
+2023-06-03 15:23:01,748 INFO NEWS: Check out https://agpt.co, the official news & updates site for Auto-GPT!
+2023-06-03 15:23:01,750 INFO NEWS: The documentation also has a place here, at https://docs.agpt.co
+2023-06-03 15:23:01,753 INFO NEWS: 
+2023-06-03 15:23:01,756 INFO NEWS: For contributors 👷🏼
+2023-06-03 15:23:01,761 INFO NEWS: Since releasing v0.3.0, we are working on re-architecting the Auto-GPT core to make
+2023-06-03 15:23:01,763 INFO NEWS: it more extensible and to make room for structural performance-oriented R&D.
+2023-06-03 15:23:01,765 INFO NEWS: In the meantime, we have less time to process incoming pull requests and issues,
+2023-06-03 15:23:01,768 INFO NEWS: so we focus on high-value contributions:
+2023-06-03 15:23:01,771 INFO NEWS:  * significant bugfixes
+2023-06-03 15:23:01,773 INFO NEWS:   major* improvements to existing functionality and/or docs (so no single-typo fixes)
+2023-06-03 15:23:01,776 INFO NEWS:  * contributions that help us with re-architecture and other roadmapped items
+2023-06-03 15:23:01,778 INFO NEWS: We have to be somewhat selective in order to keep making progress, but this does not
+2023-06-03 15:23:01,780 INFO NEWS: mean you can't contribute. Check out the contribution guide on our wiki:
+2023-06-03 15:23:01,782 INFO NEWS: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing
+2023-06-03 15:23:01,785 INFO NEWS: 
+2023-06-03 15:23:01,788 INFO NEWS: 🚀 v0.3.1 Release 🚀
+2023-06-03 15:23:01,790 INFO NEWS: Over a week and 47 pull requests have passed since v0.3.0, and we are happy to announce
+2023-06-03 15:23:01,794 INFO NEWS: the release of v0.3.1!
+2023-06-03 15:23:01,796 INFO NEWS: 
+2023-06-03 15:23:01,798 INFO NEWS: Highlights and notable changes since v0.2.2:
+2023-06-03 15:23:01,803 INFO NEWS: 
+2023-06-03 15:23:01,805 INFO NEWS: Changes to Docker configuration 🐋
+2023-06-03 15:23:01,820 INFO NEWS:   The workdir has been changed from /home/appuser to /app*.
+2023-06-03 15:23:01,825 INFO NEWS:     Be sure to update any volume mounts accordingly!
+2023-06-03 15:23:01,828 INFO NEWS:  * Docker-compose 1.29.0 is now required.
+2023-06-03 15:23:01,836 INFO NEWS: 
+2023-06-03 15:23:01,839 INFO NEWS: Logging 🧾
+2023-06-03 15:23:01,842 INFO NEWS:  * Log functionality has been improved for better understanding
+2023-06-03 15:23:01,846 INFO NEWS:     and easier summarization.
+2023-06-03 15:23:01,849 INFO NEWS:  * All LLM interactions are now logged to logs/DEBUG, to help with
+2023-06-03 15:23:01,850 INFO NEWS:     debugging and development.
+2023-06-03 15:23:01,853 INFO NEWS: 
+2023-06-03 15:23:01,856 INFO NEWS: Other
+2023-06-03 15:23:01,859 INFO NEWS:  * Edge browser is now supported by the `browse_website` command.
+2023-06-03 15:23:01,861 INFO NEWS:  * Sets of commands can now be disabled using DISABLED_COMMAND_CATEGORIES in .env.
+2023-06-03 15:23:01,866 INFO NEWS: 
+2023-06-03 15:23:01,868 INFO NEWS: ⚠️ Command `send_tweet` is REMOVED
+2023-06-03 15:23:01,871 INFO NEWS: Twitter functionality (and more) is now covered by plugins, see [Plugin support 🔌]
+2023-06-03 15:23:01,875 INFO NEWS: 
+2023-06-03 15:23:01,877 INFO NEWS: Plugin support 🔌
+2023-06-03 15:23:01,880 INFO NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities,
+2023-06-03 15:23:01,882 INFO NEWS: adding support for third-party services and more.
+2023-06-03 15:23:01,884 INFO NEWS: See https://github.com/Significant-Gravitas/Auto-GPT-Plugins for instructions and
+2023-06-03 15:23:01,888 INFO NEWS: available plugins. Specific plugins can be allowlisted/denylisted in .env.
+2023-06-03 15:23:01,896 INFO NEWS: 
+2023-06-03 15:23:01,900 INFO NEWS: Memory backend deprecation ⚠️
+2023-06-03 15:23:01,902 INFO NEWS: The Milvus, Pinecone and Weaviate memory backends were rendered incompatible
+2023-06-03 15:23:01,906 INFO NEWS: by work on the memory system, and have been removed in `master`. The Redis
+2023-06-03 15:23:01,907 INFO NEWS: memory store was also temporarily removed but we aim to merge a new implementation
+2023-06-03 15:23:01,911 INFO NEWS: before the next release.
+2023-06-03 15:23:01,913 INFO NEWS: Whether built-in support for the others will be added back in the future is subject to
+2023-06-03 15:23:01,918 INFO NEWS: discussion, feel free to pitch in: https://github.com/Significant-Gravitas/Auto-GPT/discussions/4280
+2023-06-03 15:23:01,919 INFO NEWS: 
+2023-06-03 15:23:01,922 INFO NEWS: Challenge Workflow 🏆
+2023-06-03 15:23:01,926 INFO NEWS: If you have been working on challenges... Thank You!
+2023-06-03 15:23:01,932 INFO NEWS: But to run the debugger challenge or other challenges using cassettes and VCR in docker, You will now need to `pip uninstall vcrpy` and `pip install -r requirements.txt` again.
+2023-06-03 15:23:01,936 INFO NEWS: This will install a new version of vcrpy that is compatible with running vcr in docker.
+2023-06-03 15:23:01,940 INFO NEWS: This workflow will be fixed as soon as the maintainer from VCRpy merges our changes.
+2023-06-03 15:23:01,941 INFO NEWS: 
+2023-06-03 15:23:07,157 INFO  
+Plugins found: 1
+--------------------
+2023-06-03 15:23:07,159 INFO  Auto-GPT-Chemoinformatics-plugin: 0.1.0 - This is the Auto-GPT chemoinformatics plugin.
+2023-06-03 15:23:07,383 INFO Name : Hoshino AI
+2023-06-03 15:23:07,533 INFO Role : Medicinal Chemist and Chemoinformatician
+2023-06-03 15:23:07,731 INFO Goals: ['Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.', 'Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation', 'Update the setting json file to use the two PDBs you just created and output the file as 8gcy_preparation_setting.json.', 'Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json', 'Shutdown when task is done.']
+2023-06-03 15:23:08,334 INFO API Budget: $3.0
+2023-06-03 15:23:08,481 INFO Hoshino AI has been created with the following details:
+2023-06-03 15:23:08,818 INFO Name: Hoshino AI
+2023-06-03 15:23:08,950 INFO Role: Medicinal Chemist and Chemoinformatician
+2023-06-03 15:23:09,121 INFO Goals: 
+2023-06-03 15:23:09,186 INFO - Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.
+2023-06-03 15:23:09,538 INFO - Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation
+2023-06-03 15:23:09,858 INFO - Update the setting json file to use the two PDBs you just created and output the file as 8gcy_preparation_setting.json.
+2023-06-03 15:23:10,278 INFO - Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json
+2023-06-03 15:23:10,601 INFO - Shutdown when task is done.
+2023-06-03 15:23:10,772 INFO Using memory of type: LocalCache
+2023-06-03 15:23:10,912 INFO Using Browser: chrome
+2023-06-03 15:23:11,055 DEBUG  []
+2023-06-03 15:23:11,760 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:23:11 2023"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $3.000\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:23:43,327 INFO  THOUGHTS: I need to create protein apo structure and ligand-only PDBs from 8gcy.pdb. I will use the Chemoinformatics plugin commands 'make_apo_protein_pdb' and 'make_only_ligand_compound_pdb' to achieve this.
+2023-06-03 15:23:43,828 INFO REASONING: The first step in the task is to create the protein apo structure and ligand-only PDBs from the given PDB file. The Chemoinformatics plugin provides commands to do this.
+2023-06-03 15:23:44,343 INFO PLAN: 
+2023-06-03 15:23:44,409 INFO -  Use 'make_apo_protein_pdb' to create protein apo structure
+2023-06-03 15:23:44,658 INFO -  Use 'make_only_ligand_compound_pdb' to create ligand-only PDB
+2023-06-03 15:23:44,901 INFO CRITICISM: None
+2023-06-03 15:23:45,012 DEBUG  {
+    "thoughts": {
+        "text": "I need to create protein apo structure and ligand-only PDBs from 8gcy.pdb. I will use the Chemoinformatics plugin commands 'make_apo_protein_pdb' and 'make_only_ligand_compound_pdb' to achieve this.",
+        "reasoning": "The first step in the task is to create the protein apo structure and ligand-only PDBs from the given PDB file. The Chemoinformatics plugin provides commands to do this.",
+        "plan": "- Use 'make_apo_protein_pdb' to create protein apo structure\n- Use 'make_only_ligand_compound_pdb' to create ligand-only PDB",
+        "criticism": "None",
+        "speak": "I will create protein apo structure and ligand-only PDBs from 8gcy.pdb using the Chemoinformatics plugin commands."
+    },
+    "command": {
+        "name": "make_apo_protein_pdb",
+        "args": {
+            "pdb": "8gcy.pdb"
+        }
+    }
+}
+2023-06-03 15:23:45,022 INFO NEXT ACTION:  COMMAND = make_apo_protein_pdb  ARGUMENTS = {'pdb': '8gcy.pdb'}
+2023-06-03 15:23:45,265 INFO  Enter 'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands, 'n' to exit program, or enter feedback for ...
+2023-06-03 15:23:45,271 INFO  Asking user via keyboard...
+2023-06-03 15:25:24,102 INFO  You interrupted Auto-GPT
+2023-06-03 15:25:24,103 INFO  Quitting...
+2023-06-03 15:25:28,162 INFO GPT4 Only Mode:  ENABLED
+2023-06-03 15:25:28,335 INFO Using AI Settings File: ai_settings_230603-2.yaml
+2023-06-03 15:25:28,682 INFO NEWS: Welcome to Auto-GPT!
+2023-06-03 15:25:28,684 INFO NEWS: Below you'll find the latest Auto-GPT News and updates regarding features!
+2023-06-03 15:25:28,688 INFO NEWS: If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag.
+2023-06-03 15:25:28,691 INFO NEWS: 
+2023-06-03 15:25:28,693 INFO NEWS: Website and Documentation Site 📰📖
+2023-06-03 15:25:28,695 INFO NEWS: Check out https://agpt.co, the official news & updates site for Auto-GPT!
+2023-06-03 15:25:28,697 INFO NEWS: The documentation also has a place here, at https://docs.agpt.co
+2023-06-03 15:25:28,699 INFO NEWS: 
+2023-06-03 15:25:28,702 INFO NEWS: For contributors 👷🏼
+2023-06-03 15:25:28,704 INFO NEWS: Since releasing v0.3.0, we are working on re-architecting the Auto-GPT core to make
+2023-06-03 15:25:28,707 INFO NEWS: it more extensible and to make room for structural performance-oriented R&D.
+2023-06-03 15:25:28,710 INFO NEWS: In the meantime, we have less time to process incoming pull requests and issues,
+2023-06-03 15:25:28,712 INFO NEWS: so we focus on high-value contributions:
+2023-06-03 15:25:28,715 INFO NEWS:  * significant bugfixes
+2023-06-03 15:25:28,719 INFO NEWS:   major* improvements to existing functionality and/or docs (so no single-typo fixes)
+2023-06-03 15:25:28,722 INFO NEWS:  * contributions that help us with re-architecture and other roadmapped items
+2023-06-03 15:25:28,726 INFO NEWS: We have to be somewhat selective in order to keep making progress, but this does not
+2023-06-03 15:25:28,729 INFO NEWS: mean you can't contribute. Check out the contribution guide on our wiki:
+2023-06-03 15:25:28,732 INFO NEWS: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing
+2023-06-03 15:25:28,735 INFO NEWS: 
+2023-06-03 15:25:28,737 INFO NEWS: 🚀 v0.3.1 Release 🚀
+2023-06-03 15:25:28,742 INFO NEWS: Over a week and 47 pull requests have passed since v0.3.0, and we are happy to announce
+2023-06-03 15:25:28,747 INFO NEWS: the release of v0.3.1!
+2023-06-03 15:25:28,750 INFO NEWS: 
+2023-06-03 15:25:28,753 INFO NEWS: Highlights and notable changes since v0.2.2:
+2023-06-03 15:25:28,756 INFO NEWS: 
+2023-06-03 15:25:28,759 INFO NEWS: Changes to Docker configuration 🐋
+2023-06-03 15:25:28,761 INFO NEWS:   The workdir has been changed from /home/appuser to /app*.
+2023-06-03 15:25:28,765 INFO NEWS:     Be sure to update any volume mounts accordingly!
+2023-06-03 15:25:28,768 INFO NEWS:  * Docker-compose 1.29.0 is now required.
+2023-06-03 15:25:28,772 INFO NEWS: 
+2023-06-03 15:25:28,775 INFO NEWS: Logging 🧾
+2023-06-03 15:25:28,777 INFO NEWS:  * Log functionality has been improved for better understanding
+2023-06-03 15:25:28,780 INFO NEWS:     and easier summarization.
+2023-06-03 15:25:28,784 INFO NEWS:  * All LLM interactions are now logged to logs/DEBUG, to help with
+2023-06-03 15:25:28,787 INFO NEWS:     debugging and development.
+2023-06-03 15:25:28,789 INFO NEWS: 
+2023-06-03 15:25:28,791 INFO NEWS: Other
+2023-06-03 15:25:28,793 INFO NEWS:  * Edge browser is now supported by the `browse_website` command.
+2023-06-03 15:25:28,797 INFO NEWS:  * Sets of commands can now be disabled using DISABLED_COMMAND_CATEGORIES in .env.
+2023-06-03 15:25:28,799 INFO NEWS: 
+2023-06-03 15:25:28,803 INFO NEWS: ⚠️ Command `send_tweet` is REMOVED
+2023-06-03 15:25:28,806 INFO NEWS: Twitter functionality (and more) is now covered by plugins, see [Plugin support 🔌]
+2023-06-03 15:25:28,812 INFO NEWS: 
+2023-06-03 15:25:28,814 INFO NEWS: Plugin support 🔌
+2023-06-03 15:25:28,818 INFO NEWS: Auto-GPT now has support for plugins! With plugins, you can extend Auto-GPT's abilities,
+2023-06-03 15:25:28,822 INFO NEWS: adding support for third-party services and more.
+2023-06-03 15:25:28,827 INFO NEWS: See https://github.com/Significant-Gravitas/Auto-GPT-Plugins for instructions and
+2023-06-03 15:25:28,829 INFO NEWS: available plugins. Specific plugins can be allowlisted/denylisted in .env.
+2023-06-03 15:25:28,832 INFO NEWS: 
+2023-06-03 15:25:28,834 INFO NEWS: Memory backend deprecation ⚠️
+2023-06-03 15:25:28,836 INFO NEWS: The Milvus, Pinecone and Weaviate memory backends were rendered incompatible
+2023-06-03 15:25:28,838 INFO NEWS: by work on the memory system, and have been removed in `master`. The Redis
+2023-06-03 15:25:28,840 INFO NEWS: memory store was also temporarily removed but we aim to merge a new implementation
+2023-06-03 15:25:28,843 INFO NEWS: before the next release.
+2023-06-03 15:25:28,845 INFO NEWS: Whether built-in support for the others will be added back in the future is subject to
+2023-06-03 15:25:28,847 INFO NEWS: discussion, feel free to pitch in: https://github.com/Significant-Gravitas/Auto-GPT/discussions/4280
+2023-06-03 15:25:28,851 INFO NEWS: 
+2023-06-03 15:25:28,855 INFO NEWS: Challenge Workflow 🏆
+2023-06-03 15:25:28,858 INFO NEWS: If you have been working on challenges... Thank You!
+2023-06-03 15:25:28,861 INFO NEWS: But to run the debugger challenge or other challenges using cassettes and VCR in docker, You will now need to `pip uninstall vcrpy` and `pip install -r requirements.txt` again.
+2023-06-03 15:25:28,862 INFO NEWS: This will install a new version of vcrpy that is compatible with running vcr in docker.
+2023-06-03 15:25:28,864 INFO NEWS: This workflow will be fixed as soon as the maintainer from VCRpy merges our changes.
+2023-06-03 15:25:28,865 INFO NEWS: 
+2023-06-03 15:25:32,385 INFO  
+Plugins found: 1
+--------------------
+2023-06-03 15:25:32,387 INFO  Auto-GPT-Chemoinformatics-plugin: 0.1.0 - This is the Auto-GPT chemoinformatics plugin.
+2023-06-03 15:25:32,507 INFO Name : Hoshino AI
+2023-06-03 15:25:32,683 INFO Role : Medicinal Chemist and Chemoinformatician
+2023-06-03 15:25:32,864 INFO Goals: ['Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.', 'Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation', 'Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.', 'Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json', 'Shutdown when task is done.']
+2023-06-03 15:25:33,692 INFO API Budget: $3.0
+2023-06-03 15:25:33,820 INFO Hoshino AI has been created with the following details:
+2023-06-03 15:25:34,005 INFO Name: Hoshino AI
+2023-06-03 15:25:34,091 INFO Role: Medicinal Chemist and Chemoinformatician
+2023-06-03 15:25:34,239 INFO Goals: 
+2023-06-03 15:25:34,313 INFO - Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.
+2023-06-03 15:25:34,660 INFO - Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation
+2023-06-03 15:25:35,085 INFO - Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.
+2023-06-03 15:25:35,521 INFO - Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json
+2023-06-03 15:25:35,824 INFO - Shutdown when task is done.
+2023-06-03 15:25:36,027 INFO Using memory of type: LocalCache
+2023-06-03 15:25:36,224 INFO Using Browser: chrome
+2023-06-03 15:25:36,344 DEBUG  []
+2023-06-03 15:25:36,909 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:25:36 2023"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $3.000\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:25:53,953 INFO  THOUGHTS: I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.
+2023-06-03 15:25:54,313 INFO REASONING: The first step is to separate the protein and ligand from the given PDB file.
+2023-06-03 15:25:54,651 INFO PLAN: 
+2023-06-03 15:25:54,727 INFO -  Use make_apo_protein_pdb to create protein apo structure
+2023-06-03 15:25:54,943 INFO -  Use make_only_ligand_compound_pdb to create ligand-only PDB
+2023-06-03 15:25:55,137 INFO CRITICISM: None
+2023-06-03 15:25:55,224 DEBUG  {
+    "thoughts": {
+        "text": "I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.",
+        "reasoning": "The first step is to separate the protein and ligand from the given PDB file.",
+        "plan": "- Use make_apo_protein_pdb to create protein apo structure\n- Use make_only_ligand_compound_pdb to create ligand-only PDB",
+        "criticism": "None",
+        "speak": "I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file."
+    },
+    "command": {
+        "name": "make_apo_protein_pdb",
+        "args": {
+            "pdb": "8gcy.pdb"
+        }
+    }
+}
+2023-06-03 15:25:55,231 INFO NEXT ACTION:  COMMAND = make_apo_protein_pdb  ARGUMENTS = {'pdb': '8gcy.pdb'}
+2023-06-03 15:25:55,451 INFO  Enter 'y' to authorise command, 'y -N' to run N continuous commands, 's' to run self-feedback commands, 'n' to exit program, or enter feedback for ...
+2023-06-03 15:25:55,452 INFO  Asking user via keyboard...
+2023-06-03 15:26:09,328 INFO -=-=-=-=-=-=-= COMMAND AUTHORISED BY USER -=-=-=-=-=-=-= 
+2023-06-03 15:26:09,785 INFO SYSTEM:  Command make_apo_protein_pdb returned: 8gcy_apo.pdb
+2023-06-03 15:26:09,966 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    }
+]
+2023-06-03 15:26:09,979 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\nI was created.\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:26:12,213 DEBUG  "I was created. Nothing new happened."
+2023-06-03 15:26:12,218 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:26:09 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nI was created. Nothing new happened."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.950\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:26:35,194 INFO  THOUGHTS: Now I need to create the ligand-only PDB.
+2023-06-03 15:26:35,469 INFO REASONING: I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.
+2023-06-03 15:26:35,897 INFO PLAN: 
+2023-06-03 15:26:35,964 INFO -  Use make_only_ligand_compound_pdb to create ligand-only PDB
+2023-06-03 15:26:36,183 INFO CRITICISM: None
+2023-06-03 15:26:36,229 DEBUG  {
+    "thoughts": {
+        "text": "Now I need to create the ligand-only PDB.",
+        "reasoning": "I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.",
+        "plan": "- Use make_only_ligand_compound_pdb to create ligand-only PDB",
+        "criticism": "None",
+        "speak": "Next, I will create the ligand-only PDB from the given 8gcy.pdb file."
+    },
+    "command": {
+        "name": "make_only_ligand_compound_pdb",
+        "args": {
+            "pdb": "8gcy.pdb"
+        }
+    }
+}
+2023-06-03 15:26:36,236 INFO NEXT ACTION:  COMMAND = make_only_ligand_compound_pdb  ARGUMENTS = {'pdb': '8gcy.pdb'}
+2023-06-03 15:26:36,550 INFO [36mAUTHORISED COMMANDS LEFT: [0m9 
+2023-06-03 15:26:36,803 INFO SYSTEM:  Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']
+2023-06-03 15:26:37,090 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"Now I need to create the ligand-only PDB.\",\n        \"reasoning\": \"I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.\",\n        \"plan\": \"- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"Next, I will create the ligand-only PDB from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_only_ligand_compound_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    }
+]
+2023-06-03 15:26:37,109 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nI was created. Nothing new happened.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:26:40,668 DEBUG  "This reminds you of these events from your past: \nI was created. Nothing new happened."
+2023-06-03 15:26:40,675 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:26:37 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nThis reminds you of these events from your past: \nI was created. Nothing new happened."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"Now I need to create the ligand-only PDB.\",\n        \"reasoning\": \"I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.\",\n        \"plan\": \"- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"Next, I will create the ligand-only PDB from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_only_ligand_compound_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.892\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:26:54,979 INFO  THOUGHTS: I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.
+2023-06-03 15:26:55,351 INFO REASONING: Reading the example file will help me understand the format and required parameters for creating the setting json file.
+2023-06-03 15:26:55,800 INFO PLAN: 
+2023-06-03 15:26:55,883 INFO -  Use read_file to read target_preparation_example.jsonc
+2023-06-03 15:26:56,065 INFO CRITICISM: None
+2023-06-03 15:26:56,157 DEBUG  {
+    "thoughts": {
+        "text": "I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.",
+        "reasoning": "Reading the example file will help me understand the format and required parameters for creating the setting json file.",
+        "plan": "- Use read_file to read target_preparation_example.jsonc",
+        "criticism": "None",
+        "speak": "I will now read the target_preparation_example.jsonc file to understand the format for creating the setting json file."
+    },
+    "command": {
+        "name": "read_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/target_preparation_example.jsonc"
+        }
+    }
+}
+2023-06-03 15:26:56,164 INFO NEXT ACTION:  COMMAND = read_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/target_preparation_example.jsonc'}
+2023-06-03 15:26:56,381 INFO [36mAUTHORISED COMMANDS LEFT: [0m8 
+2023-06-03 15:26:56,555 INFO SYSTEM:  Command read_file returned: {
+    "target_preparation": {
+        "header": { // general settings
+            "logging": { // logging settings (e.g. which file to write to)
+                "logfile": "/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log"
+            }
+        },
+        "input_path": "/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb", // file path for apo (not including ligand compound) protein pdb
+        "fixer": { // based on "PDBFixer"; tries to fix common problems with PDB files
+            "enabled": true,
+            "standardize": true, // enables standardization of residues 
+            "remove_heterogens": true, // remove hetero-entries
+            "fix_missing_heavy_atoms": true, // if possible, fix missing heavy atoms
+            "fix_missing_hydrogens": true, // add hydrogens, which are usually not present in PDB files
+            "fix_missing_loops": false, // add missing loops; CAUTION: the result is usually not sufficient
+            "add_water_box": false, // if you want to put the receptor into a box of water molecules
+            "fixed_pdb_path": "/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb" // if specified and not "None", the fixed PDB file will be stored here
+        },
+        "runs": [ // "runs" holds a list of backend runs; at least one is required
+            {
+                "backend": "AutoDockVina", // one of the backends supported ("AutoDockVina", "OpenEye", ...)
+                "output": {
+                    "receptor_path": "/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt" // the generated receptor file will be saved to this location
+                },
+                "parameters": {
+                    "pH": 7.4, // # sets the protonation states (NOT used in Vina)
+                    "extract_box": { // in order to extract the coordinates of the pocket (see text)
+                        "reference_ligand_path": "/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb", // path to the reference ligand
+                        "reference_ligand_format": "PDB" // format of the reference ligand
+                    }
+                }
+            }
+        ]
+    }
+}
+
+2023-06-03 15:26:57,266 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"Now I need to create the ligand-only PDB.\",\n        \"reasoning\": \"I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.\",\n        \"plan\": \"- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"Next, I will create the ligand-only PDB from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_only_ligand_compound_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.\",\n        \"reasoning\": \"Reading the example file will help me understand the format and required parameters for creating the setting json file.\",\n        \"plan\": \"- Use read_file to read target_preparation_example.jsonc\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now read the target_preparation_example.jsonc file to understand the format for creating the setting json file.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"target_preparation\": {\n        \"header\": { // general settings\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log\"\n            }\n        },\n        \"input_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb\", // file path for apo (not including ligand compound) protein pdb\n        \"fixer\": { // based on \"PDBFixer\"; tries to fix common problems with PDB files\n            \"enabled\": true,\n            \"standardize\": true, // enables standardization of residues \n            \"remove_heterogens\": true, // remove hetero-entries\n            \"fix_missing_heavy_atoms\": true, // if possible, fix missing heavy atoms\n            \"fix_missing_hydrogens\": true, // add hydrogens, which are usually not present in PDB files\n            \"fix_missing_loops\": false, // add missing loops; CAUTION: the result is usually not sufficient\n            \"add_water_box\": false, // if you want to put the receptor into a box of water molecules\n            \"fixed_pdb_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb\" // if specified and not \"None\", the fixed PDB file will be stored here\n        },\n        \"runs\": [ // \"runs\" holds a list of backend runs; at least one is required\n            {\n                \"backend\": \"AutoDockVina\", // one of the backends supported (\"AutoDockVina\", \"OpenEye\", ...)\n                \"output\": {\n                    \"receptor_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt\" // the generated receptor file will be saved to this location\n                },\n                \"parameters\": {\n                    \"pH\": 7.4, // # sets the protonation states (NOT used in Vina)\n                    \"extract_box\": { // in order to extract the coordinates of the pocket (see text)\n                        \"reference_ligand_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb\", // path to the reference ligand\n                        \"reference_ligand_format\": \"PDB\" // format of the reference ligand\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    }
+]
+2023-06-03 15:26:57,302 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nThis reminds you of these events from your past: \\nI was created. Nothing new happened.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\nNothing new happened.\n\"\"\"\n"
+    }
+]
+2023-06-03 15:27:00,334 DEBUG  "Summary:\n\"\"\"\nI was created. Nothing new happened.\n\"\"\""
+2023-06-03 15:27:00,345 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:26:57 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nSummary:\n\"\"\"\nI was created. Nothing new happened.\n\"\"\""
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"Now I need to create the ligand-only PDB.\",\n        \"reasoning\": \"I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.\",\n        \"plan\": \"- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"Next, I will create the ligand-only PDB from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_only_ligand_compound_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.\",\n        \"reasoning\": \"Reading the example file will help me understand the format and required parameters for creating the setting json file.\",\n        \"plan\": \"- Use read_file to read target_preparation_example.jsonc\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now read the target_preparation_example.jsonc file to understand the format for creating the setting json file.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"target_preparation\": {\n        \"header\": { // general settings\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log\"\n            }\n        },\n        \"input_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb\", // file path for apo (not including ligand compound) protein pdb\n        \"fixer\": { // based on \"PDBFixer\"; tries to fix common problems with PDB files\n            \"enabled\": true,\n            \"standardize\": true, // enables standardization of residues \n            \"remove_heterogens\": true, // remove hetero-entries\n            \"fix_missing_heavy_atoms\": true, // if possible, fix missing heavy atoms\n            \"fix_missing_hydrogens\": true, // add hydrogens, which are usually not present in PDB files\n            \"fix_missing_loops\": false, // add missing loops; CAUTION: the result is usually not sufficient\n            \"add_water_box\": false, // if you want to put the receptor into a box of water molecules\n            \"fixed_pdb_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb\" // if specified and not \"None\", the fixed PDB file will be stored here\n        },\n        \"runs\": [ // \"runs\" holds a list of backend runs; at least one is required\n            {\n                \"backend\": \"AutoDockVina\", // one of the backends supported (\"AutoDockVina\", \"OpenEye\", ...)\n                \"output\": {\n                    \"receptor_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt\" // the generated receptor file will be saved to this location\n                },\n                \"parameters\": {\n                    \"pH\": 7.4, // # sets the protonation states (NOT used in Vina)\n                    \"extract_box\": { // in order to extract the coordinates of the pocket (see text)\n                        \"reference_ligand_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb\", // path to the reference ligand\n                        \"reference_ligand_format\": \"PDB\" // format of the reference ligand\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.827\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:27:42,585 INFO  THOUGHTS: I need to update the setting json file to use the two PDBs I just created, protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.
+2023-06-03 15:27:43,050 INFO REASONING: Updating the setting json file with the correct input paths will allow me to run target protein preparation with the created PDBs.
+2023-06-03 15:27:43,457 INFO PLAN: 
+2023-06-03 15:27:43,530 INFO -  Update the setting json file
+2023-06-03 15:27:43,711 INFO -  Write the updated setting json to 8gcy_preparation_setting.json
+2023-06-03 15:27:43,911 INFO CRITICISM: None
+2023-06-03 15:27:44,010 DEBUG  {
+    "thoughts": {
+        "text": "I need to update the setting json file to use the two PDBs I just created, protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.",
+        "reasoning": "Updating the setting json file with the correct input paths will allow me to run target protein preparation with the created PDBs.",
+        "plan": "- Update the setting json file\n- Write the updated setting json to 8gcy_preparation_setting.json",
+        "criticism": "None",
+        "speak": "I will now update the setting json file with the created PDBs and save it as 8gcy_preparation_setting.json."
+    },
+    "command": {
+        "name": "write_to_file",
+        "args": {
+            "filename": "/workspace/Auto-GPT/autogpt/auto_gpt_workspace/8gcy_preparation_setting.json",
+            "text": "{\n    \"target_preparation\": {\n        \"header\": {\n            \"logging\": {\n                \"logfile\": \"8gcy_target_prep.log\"\n            }\n        },\n        \"input_path\": \"8gcy_apo.pdb\",\n        \"fixer\": {\n            \"enabled\": true,\n            \"standardize\": true,\n            \"remove_heterogens\": true,\n            \"fix_missing_heavy_atoms\": true,\n            \"fix_missing_hydrogens\": true,\n            \"fix_missing_loops\": false,\n            \"add_water_box\": false,\n            \"fixed_pdb_path\": \"8gcy_fixed_target.pdb\"\n        },\n        \"runs\": [\n            {\n                \"backend\": \"AutoDockVina\",\n                \"output\": {\n                    \"receptor_path\": \"8gcy_receptor.pdbqt\"\n                },\n                \"parameters\": {\n                    \"pH\": 7.4,\n                    \"extract_box\": {\n                        \"reference_ligand_path\": \"Z3N.pdb\",\n                        \"reference_ligand_format\": \"PDB\"\n                    }\n                }\n            }\n        ]\n    }\n}"
+        }
+    }
+}
+2023-06-03 15:27:44,019 INFO NEXT ACTION:  COMMAND = write_to_file  ARGUMENTS = {'filename': '/workspace/Auto-GPT/autogpt/auto_gpt_workspace/8gcy_preparation_setting.json', 'text': '{\n    "target_preparation": {\n        "header": {\n            "logging": {\n                "logfile": "8gcy_target_prep.log"\n            }\n        },\n        "input_path": "8gcy_apo.pdb",\n        "fixer": {\n            "enabled": true,\n            "standardize": true,\n            "remove_heterogens": true,\n            "fix_missing_heavy_atoms": true,\n            "fix_missing_hydrogens": true,\n            "fix_missing_loops": false,\n            "add_water_box": false,\n            "fixed_pdb_path": "8gcy_fixed_target.pdb"\n        },\n        "runs": [\n            {\n                "backend": "AutoDockVina",\n                "output": {\n                    "receptor_path": "8gcy_receptor.pdbqt"\n                },\n                "parameters": {\n                    "pH": 7.4,\n                    "extract_box": {\n                        "reference_ligand_path": "Z3N.pdb",\n                        "reference_ligand_format": "PDB"\n                    }\n                }\n            }\n        ]\n    }\n}'}
+2023-06-03 15:27:44,711 INFO [36mAUTHORISED COMMANDS LEFT: [0m7 
+2023-06-03 15:27:44,848 INFO SYSTEM:  Command write_to_file returned: File written to successfully.
+2023-06-03 15:27:45,081 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"Now I need to create the ligand-only PDB.\",\n        \"reasoning\": \"I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.\",\n        \"plan\": \"- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"Next, I will create the ligand-only PDB from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_only_ligand_compound_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.\",\n        \"reasoning\": \"Reading the example file will help me understand the format and required parameters for creating the setting json file.\",\n        \"plan\": \"- Use read_file to read target_preparation_example.jsonc\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now read the target_preparation_example.jsonc file to understand the format for creating the setting json file.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"target_preparation\": {\n        \"header\": { // general settings\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log\"\n            }\n        },\n        \"input_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb\", // file path for apo (not including ligand compound) protein pdb\n        \"fixer\": { // based on \"PDBFixer\"; tries to fix common problems with PDB files\n            \"enabled\": true,\n            \"standardize\": true, // enables standardization of residues \n            \"remove_heterogens\": true, // remove hetero-entries\n            \"fix_missing_heavy_atoms\": true, // if possible, fix missing heavy atoms\n            \"fix_missing_hydrogens\": true, // add hydrogens, which are usually not present in PDB files\n            \"fix_missing_loops\": false, // add missing loops; CAUTION: the result is usually not sufficient\n            \"add_water_box\": false, // if you want to put the receptor into a box of water molecules\n            \"fixed_pdb_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb\" // if specified and not \"None\", the fixed PDB file will be stored here\n        },\n        \"runs\": [ // \"runs\" holds a list of backend runs; at least one is required\n            {\n                \"backend\": \"AutoDockVina\", // one of the backends supported (\"AutoDockVina\", \"OpenEye\", ...)\n                \"output\": {\n                    \"receptor_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt\" // the generated receptor file will be saved to this location\n                },\n                \"parameters\": {\n                    \"pH\": 7.4, // # sets the protonation states (NOT used in Vina)\n                    \"extract_box\": { // in order to extract the coordinates of the pocket (see text)\n                        \"reference_ligand_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb\", // path to the reference ligand\n                        \"reference_ligand_format\": \"PDB\" // format of the reference ligand\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to update the setting json file to use the two PDBs I just created, protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\",\n        \"reasoning\": \"Updating the setting json file with the correct input paths will allow me to run target protein preparation with the created PDBs.\",\n        \"plan\": \"- Update the setting json file\\n- Write the updated setting json to 8gcy_preparation_setting.json\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now update the setting json file with the created PDBs and save it as 8gcy_preparation_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"8gcy_preparation_setting.json\",\n            \"text\": \"{\\n    \\\"target_preparation\\\": {\\n        \\\"header\\\": {\\n            \\\"logging\\\": {\\n                \\\"logfile\\\": \\\"8gcy_target_prep.log\\\"\\n            }\\n        },\\n        \\\"input_path\\\": \\\"8gcy_apo.pdb\\\",\\n        \\\"fixer\\\": {\\n            \\\"enabled\\\": true,\\n            \\\"standardize\\\": true,\\n            \\\"remove_heterogens\\\": true,\\n            \\\"fix_missing_heavy_atoms\\\": true,\\n            \\\"fix_missing_hydrogens\\\": true,\\n            \\\"fix_missing_loops\\\": false,\\n            \\\"add_water_box\\\": false,\\n            \\\"fixed_pdb_path\\\": \\\"8gcy_fixed_target.pdb\\\"\\n        },\\n        \\\"runs\\\": [\\n            {\\n                \\\"backend\\\": \\\"AutoDockVina\\\",\\n                \\\"output\\\": {\\n                    \\\"receptor_path\\\": \\\"8gcy_receptor.pdbqt\\\"\\n                },\\n                \\\"parameters\\\": {\\n                    \\\"pH\\\": 7.4,\\n                    \\\"extract_box\\\": {\\n                        \\\"reference_ligand_path\\\": \\\"Z3N.pdb\\\",\\n                        \\\"reference_ligand_format\\\": \\\"PDB\\\"\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    }
+]
+2023-06-03 15:27:45,135 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nSummary:\\n\"\"\"\\nI was created. Nothing new happened.\\n\"\"\"'}\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'you', 'content': '{\"command\": {\"name\": \"make_apo_protein_pdb\", \"args\": {\"pdb\": \"8gcy.pdb\"}}}'}, {'role': 'your computer', 'content': 'Command make_apo_protein_pdb returned: 8gcy_apo.pdb'}, {'role': 'you', 'content': '{\"command\": {\"name\": \"make_only_ligand_compound_pdb\", \"args\": {\"pdb\": \"8gcy.pdb\"}}}'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 15:27:51,002 DEBUG  "Summary:\n\"\"\"\nI was created. I made an apo protein PDB file (8gcy_apo.pdb) from 8gcy.pdb. I also made a ligand compound PDB file from 8gcy.pdb."
+2023-06-03 15:27:51,009 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:27:45 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nSummary:\n\"\"\"\nI was created. I made an apo protein PDB file (8gcy_apo.pdb) from 8gcy.pdb. I also made a ligand compound PDB file from 8gcy.pdb."
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.\",\n        \"reasoning\": \"Reading the example file will help me understand the format and required parameters for creating the setting json file.\",\n        \"plan\": \"- Use read_file to read target_preparation_example.jsonc\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now read the target_preparation_example.jsonc file to understand the format for creating the setting json file.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"target_preparation\": {\n        \"header\": { // general settings\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log\"\n            }\n        },\n        \"input_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb\", // file path for apo (not including ligand compound) protein pdb\n        \"fixer\": { // based on \"PDBFixer\"; tries to fix common problems with PDB files\n            \"enabled\": true,\n            \"standardize\": true, // enables standardization of residues \n            \"remove_heterogens\": true, // remove hetero-entries\n            \"fix_missing_heavy_atoms\": true, // if possible, fix missing heavy atoms\n            \"fix_missing_hydrogens\": true, // add hydrogens, which are usually not present in PDB files\n            \"fix_missing_loops\": false, // add missing loops; CAUTION: the result is usually not sufficient\n            \"add_water_box\": false, // if you want to put the receptor into a box of water molecules\n            \"fixed_pdb_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb\" // if specified and not \"None\", the fixed PDB file will be stored here\n        },\n        \"runs\": [ // \"runs\" holds a list of backend runs; at least one is required\n            {\n                \"backend\": \"AutoDockVina\", // one of the backends supported (\"AutoDockVina\", \"OpenEye\", ...)\n                \"output\": {\n                    \"receptor_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt\" // the generated receptor file will be saved to this location\n                },\n                \"parameters\": {\n                    \"pH\": 7.4, // # sets the protonation states (NOT used in Vina)\n                    \"extract_box\": { // in order to extract the coordinates of the pocket (see text)\n                        \"reference_ligand_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb\", // path to the reference ligand\n                        \"reference_ligand_format\": \"PDB\" // format of the reference ligand\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to update the setting json file to use the two PDBs I just created, protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\",\n        \"reasoning\": \"Updating the setting json file with the correct input paths will allow me to run target protein preparation with the created PDBs.\",\n        \"plan\": \"- Update the setting json file\\n- Write the updated setting json to 8gcy_preparation_setting.json\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now update the setting json file with the created PDBs and save it as 8gcy_preparation_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"8gcy_preparation_setting.json\",\n            \"text\": \"{\\n    \\\"target_preparation\\\": {\\n        \\\"header\\\": {\\n            \\\"logging\\\": {\\n                \\\"logfile\\\": \\\"8gcy_target_prep.log\\\"\\n            }\\n        },\\n        \\\"input_path\\\": \\\"8gcy_apo.pdb\\\",\\n        \\\"fixer\\\": {\\n            \\\"enabled\\\": true,\\n            \\\"standardize\\\": true,\\n            \\\"remove_heterogens\\\": true,\\n            \\\"fix_missing_heavy_atoms\\\": true,\\n            \\\"fix_missing_hydrogens\\\": true,\\n            \\\"fix_missing_loops\\\": false,\\n            \\\"add_water_box\\\": false,\\n            \\\"fixed_pdb_path\\\": \\\"8gcy_fixed_target.pdb\\\"\\n        },\\n        \\\"runs\\\": [\\n            {\\n                \\\"backend\\\": \\\"AutoDockVina\\\",\\n                \\\"output\\\": {\\n                    \\\"receptor_path\\\": \\\"8gcy_receptor.pdbqt\\\"\\n                },\\n                \\\"parameters\\\": {\\n                    \\\"pH\\\": 7.4,\\n                    \\\"extract_box\\\": {\\n                        \\\"reference_ligand_path\\\": \\\"Z3N.pdb\\\",\\n                        \\\"reference_ligand_format\\\": \\\"PDB\\\"\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.717\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:28:07,866 INFO  THOUGHTS: I need to run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json.
+2023-06-03 15:28:08,193 INFO REASONING: Running target protein preparation will process the input PDBs according to the settings in the json file.
+2023-06-03 15:28:08,543 INFO PLAN: 
+2023-06-03 15:28:08,605 INFO -  Use target_protein_preparation with 8gcy_preparation_setting.json
+2023-06-03 15:28:08,792 INFO CRITICISM: None
+2023-06-03 15:28:08,897 DEBUG  {
+    "thoughts": {
+        "text": "I need to run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json.",
+        "reasoning": "Running target protein preparation will process the input PDBs according to the settings in the json file.",
+        "plan": "- Use target_protein_preparation with 8gcy_preparation_setting.json",
+        "criticism": "None",
+        "speak": "I will now run target protein preparation using the Chemoinformatics plugin with the 8gcy_preparation_setting.json file."
+    },
+    "command": {
+        "name": "target_protein_preparation",
+        "args": {
+            "setting_json": "8gcy_preparation_setting.json"
+        }
+    }
+}
+2023-06-03 15:28:08,902 INFO NEXT ACTION:  COMMAND = target_protein_preparation  ARGUMENTS = {'setting_json': '8gcy_preparation_setting.json'}
+2023-06-03 15:28:09,164 INFO [36mAUTHORISED COMMANDS LEFT: [0m6 
+2023-06-03 15:28:25,052 INFO SYSTEM:  Command target_protein_preparation returned: ('8gcy_receptor.pdbqt', '8gcy_target_prep.log')
+2023-06-03 15:28:25,262 DEBUG  [
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to make protein apo structure and ligand-only PDBs from 8gcy.pdb.\",\n        \"reasoning\": \"The first step is to separate the protein and ligand from the given PDB file.\",\n        \"plan\": \"- Use make_apo_protein_pdb to create protein apo structure\\n- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will first create the protein apo structure and ligand-only PDBs from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_apo_protein_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_apo_protein_pdb returned: 8gcy_apo.pdb"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"Now I need to create the ligand-only PDB.\",\n        \"reasoning\": \"I have created the protein apo structure, and now I need to create the ligand-only PDB to complete the first goal.\",\n        \"plan\": \"- Use make_only_ligand_compound_pdb to create ligand-only PDB\",\n        \"criticism\": \"None\",\n        \"speak\": \"Next, I will create the ligand-only PDB from the given 8gcy.pdb file.\"\n    },\n    \"command\": {\n        \"name\": \"make_only_ligand_compound_pdb\",\n        \"args\": {\n            \"pdb\": \"8gcy.pdb\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to read target_preparation_example.jsonc to know how to output setting json to run target protein preparation.\",\n        \"reasoning\": \"Reading the example file will help me understand the format and required parameters for creating the setting json file.\",\n        \"plan\": \"- Use read_file to read target_preparation_example.jsonc\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now read the target_preparation_example.jsonc file to understand the format for creating the setting json file.\"\n    },\n    \"command\": {\n        \"name\": \"read_file\",\n        \"args\": {\n            \"filename\": \"target_preparation_example.jsonc\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"target_preparation\": {\n        \"header\": { // general settings\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log\"\n            }\n        },\n        \"input_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb\", // file path for apo (not including ligand compound) protein pdb\n        \"fixer\": { // based on \"PDBFixer\"; tries to fix common problems with PDB files\n            \"enabled\": true,\n            \"standardize\": true, // enables standardization of residues \n            \"remove_heterogens\": true, // remove hetero-entries\n            \"fix_missing_heavy_atoms\": true, // if possible, fix missing heavy atoms\n            \"fix_missing_hydrogens\": true, // add hydrogens, which are usually not present in PDB files\n            \"fix_missing_loops\": false, // add missing loops; CAUTION: the result is usually not sufficient\n            \"add_water_box\": false, // if you want to put the receptor into a box of water molecules\n            \"fixed_pdb_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb\" // if specified and not \"None\", the fixed PDB file will be stored here\n        },\n        \"runs\": [ // \"runs\" holds a list of backend runs; at least one is required\n            {\n                \"backend\": \"AutoDockVina\", // one of the backends supported (\"AutoDockVina\", \"OpenEye\", ...)\n                \"output\": {\n                    \"receptor_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt\" // the generated receptor file will be saved to this location\n                },\n                \"parameters\": {\n                    \"pH\": 7.4, // # sets the protonation states (NOT used in Vina)\n                    \"extract_box\": { // in order to extract the coordinates of the pocket (see text)\n                        \"reference_ligand_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb\", // path to the reference ligand\n                        \"reference_ligand_format\": \"PDB\" // format of the reference ligand\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to update the setting json file to use the two PDBs I just created, protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\",\n        \"reasoning\": \"Updating the setting json file with the correct input paths will allow me to run target protein preparation with the created PDBs.\",\n        \"plan\": \"- Update the setting json file\\n- Write the updated setting json to 8gcy_preparation_setting.json\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now update the setting json file with the created PDBs and save it as 8gcy_preparation_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"8gcy_preparation_setting.json\",\n            \"text\": \"{\\n    \\\"target_preparation\\\": {\\n        \\\"header\\\": {\\n            \\\"logging\\\": {\\n                \\\"logfile\\\": \\\"8gcy_target_prep.log\\\"\\n            }\\n        },\\n        \\\"input_path\\\": \\\"8gcy_apo.pdb\\\",\\n        \\\"fixer\\\": {\\n            \\\"enabled\\\": true,\\n            \\\"standardize\\\": true,\\n            \\\"remove_heterogens\\\": true,\\n            \\\"fix_missing_heavy_atoms\\\": true,\\n            \\\"fix_missing_hydrogens\\\": true,\\n            \\\"fix_missing_loops\\\": false,\\n            \\\"add_water_box\\\": false,\\n            \\\"fixed_pdb_path\\\": \\\"8gcy_fixed_target.pdb\\\"\\n        },\\n        \\\"runs\\\": [\\n            {\\n                \\\"backend\\\": \\\"AutoDockVina\\\",\\n                \\\"output\\\": {\\n                    \\\"receptor_path\\\": \\\"8gcy_receptor.pdbqt\\\"\\n                },\\n                \\\"parameters\\\": {\\n                    \\\"pH\\\": 7.4,\\n                    \\\"extract_box\\\": {\\n                        \\\"reference_ligand_path\\\": \\\"Z3N.pdb\\\",\\n                        \\\"reference_ligand_format\\\": \\\"PDB\\\"\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json.\",\n        \"reasoning\": \"Running target protein preparation will process the input PDBs according to the settings in the json file.\",\n        \"plan\": \"- Use target_protein_preparation with 8gcy_preparation_setting.json\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now run target protein preparation using the Chemoinformatics plugin with the 8gcy_preparation_setting.json file.\"\n    },\n    \"command\": {\n        \"name\": \"target_protein_preparation\",\n        \"args\": {\n            \"setting_json\": \"8gcy_preparation_setting.json\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command target_protein_preparation returned: ('8gcy_receptor.pdbqt', '8gcy_target_prep.log')"
+    }
+]
+2023-06-03 15:28:25,282 DEBUG  [
+    {
+        "role": "user",
+        "content": "Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.\n\nYou will receive the current summary and the your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.\n\nSummary So Far:\n\"\"\"\n{'role': 'system', 'content': 'This reminds you of these events from your past: \\nSummary:\\n\"\"\"\\nI was created. I made an apo protein PDB file (8gcy_apo.pdb) from 8gcy.pdb. I also made a ligand compound PDB file from 8gcy.pdb.'}\n\"\"\"\n\nLatest Development:\n\"\"\"\n[{'role': 'your computer', 'content': \"Command make_only_ligand_compound_pdb returned: ['ZN.pdb', 'SO4.pdb', 'Z3N.pdb', 'EDO.pdb', 'UNX.pdb']\"}, {'role': 'you', 'content': '{\"command\": {\"name\": \"read_file\", \"args\": {\"filename\": \"target_preparation_example.jsonc\"}}}'}]\n\"\"\"\n"
+    }
+]
+2023-06-03 15:28:34,801 DEBUG  "Summary:\n\"\"\"\nI was created. I made an apo protein PDB file (8gcy_apo.pdb) from 8gcy.pdb. I also made a ligand compound PDB file from 8gcy.pdb. I created separate PDB files for each ligand compound: ZN.pdb, SO4.pdb, Z3N.pdb, EDO.pdb, and UNX.pdb. I read the file \"target_preparation_example.jsonc\".\n\"\"\""
+2023-06-03 15:28:34,814 DEBUG  [
+    {
+        "role": "system",
+        "content": "You are Hoshino AI, Medicinal Chemist and Chemoinformatician\nYour decisions must always be made independently without seeking user assistance. Play to your strengths as an LLM and pursue simple strategies with no legal complications.\n\nGOALS:\n\n1. Make protein apo structure and ligand-only PDBs from 8gcy.pdb by using the Chemoinformatics plugin respectively.\n2. Read target_preparation_example.jsonc to know how to output setting json to run target protein preparation\n3. Update the setting json file to use the two PDBs you just created protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\n4. Run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json\n5. Shutdown when task is done.\n\nIt takes money to let you run. Your API budget is $3.000\n\nConstraints:\n1. ~4000 word limit for short term memory. Your short term memory is short, so immediately save important information to files.\n2. If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.\n3. No user assistance\n4. Exclusively use the commands listed in double quotes e.g. \"command name\"\n\nCommands:\n1. analyze_code: Analyze Code, args: \"code\": \"<full_code_string>\"\n2. execute_python_file: Execute Python File, args: \"filename\": \"<filename>\"\n3. append_to_file: Append to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n4. delete_file: Delete file, args: \"filename\": \"<filename>\"\n5. list_files: List Files in Directory, args: \"directory\": \"<directory>\"\n6. read_file: Read file, args: \"filename\": \"<filename>\"\n7. write_to_file: Write to file, args: \"filename\": \"<filename>\", \"text\": \"<text>\"\n8. generate_image: Generate Image, args: \"prompt\": \"<prompt>\"\n9. improve_code: Get Improved Code, args: \"suggestions\": \"<list_of_suggestions>\", \"code\": \"<full_code_string>\"\n10. send_tweet: Send Tweet, args: \"tweet_text\": \"<tweet_text>\"\n11. browse_website: Browse Website, args: \"url\": \"<url>\", \"question\": \"<what_you_want_to_find_on_website>\"\n12. write_tests: Write Tests, args: \"code\": \"<full_code_string>\", \"focus\": \"<list_of_focus_areas>\"\n13. delete_agent: Delete GPT Agent, args: \"key\": \"<key>\"\n14. get_hyperlinks: Get text summary, args: \"url\": \"<url>\"\n15. get_text_summary: Get text summary, args: \"url\": \"<url>\", \"question\": \"<question>\"\n16. list_agents: List GPT Agents, args: () -> str\n17. message_agent: Message GPT Agent, args: \"key\": \"<key>\", \"message\": \"<message>\"\n18. start_agent: Start GPT Agent, args: \"name\": \"<name>\", \"task\": \"<short_task_desc>\", \"prompt\": \"<prompt>\"\n19. task_complete: Task Complete (Shutdown), args: \"reason\": \"<reason>\"\n20. calculate_similarity: \"Calculate similarity between two chemical compound SMILES key with Tanimoto coefficient\", args: \"smiles1\": \"<smiles1>\", \"smiles2\": \"<smiles2>\"\n21. predict_CBL_B_activity: \"Predict CBL_B activity for compound SMILES key\", args: \"smiles\": \"<smiles>\"\n22. validate_smiles_string: \"Evaluate whether SMILES strings are valid and returns True if so\", args: \"smiles\": \"<smiles>\"\n23. target_protein_preparation: \"Do target protein preparation with preparation setting json. Setting json must be absolute path. See DockStream/target_preparation_example.jsonc to make setting json\", args: \"setting_json\": \"<setting_json>\"\n24. make_apo_protein_pdb: \"Make apo protein (only protein, not including ligand compounds) PDB\", args: \"pdb\": \"<pdb>\"\n25. make_only_ligand_compound_pdb: \"Make only ligand compounds PDB\", args: \"pdb\": \"<pdb>\"\n\nResources:\n1. Internet access for searches and information gathering.\n2. Long Term memory management.\n3. GPT-3.5 powered Agents for delegation of simple tasks.\n4. File output.\n\nPerformance Evaluation:\n1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.\n2. Constructively self-criticize your big-picture behavior constantly.\n3. Reflect on past decisions and strategies to refine your approach.\n4. Every command has a cost, so be smart and efficient. Aim to complete tasks in the least number of steps.\n5. Write all code to a file.\n\nYou should only respond in JSON format as described below \nResponse Format: \n{\n    \"thoughts\": {\n        \"text\": \"thought\",\n        \"reasoning\": \"reasoning\",\n        \"plan\": \"- short bulleted\\n- list that conveys\\n- long-term plan\",\n        \"criticism\": \"constructive self-criticism\",\n        \"speak\": \"thoughts summary to say to user\"\n    },\n    \"command\": {\n        \"name\": \"command name\",\n        \"args\": {\n            \"arg name\": \"value\"\n        }\n    }\n} \nEnsure the response can be parsed by Python json.loads"
+    },
+    {
+        "role": "system",
+        "content": "The current time and date is Sat Jun  3 15:28:25 2023"
+    },
+    {
+        "role": "system",
+        "content": "This reminds you of these events from your past: \nSummary:\n\"\"\"\nI was created. I made an apo protein PDB file (8gcy_apo.pdb) from 8gcy.pdb. I also made a ligand compound PDB file from 8gcy.pdb. I created separate PDB files for each ligand compound: ZN.pdb, SO4.pdb, Z3N.pdb, EDO.pdb, and UNX.pdb. I read the file \"target_preparation_example.jsonc\".\n\"\"\""
+    },
+    {
+        "role": "system",
+        "content": "Command read_file returned: {\n    \"target_preparation\": {\n        \"header\": { // general settings\n            \"logging\": { // logging settings (e.g. which file to write to)\n                \"logfile\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_target_prep.log\"\n            }\n        },\n        \"input_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/1UYD_apo.pdb\", // file path for apo (not including ligand compound) protein pdb\n        \"fixer\": { // based on \"PDBFixer\"; tries to fix common problems with PDB files\n            \"enabled\": true,\n            \"standardize\": true, // enables standardization of residues \n            \"remove_heterogens\": true, // remove hetero-entries\n            \"fix_missing_heavy_atoms\": true, // if possible, fix missing heavy atoms\n            \"fix_missing_hydrogens\": true, // add hydrogens, which are usually not present in PDB files\n            \"fix_missing_loops\": false, // add missing loops; CAUTION: the result is usually not sufficient\n            \"add_water_box\": false, // if you want to put the receptor into a box of water molecules\n            \"fixed_pdb_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_fixed_target.pdb\" // if specified and not \"None\", the fixed PDB file will be stored here\n        },\n        \"runs\": [ // \"runs\" holds a list of backend runs; at least one is required\n            {\n                \"backend\": \"AutoDockVina\", // one of the backends supported (\"AutoDockVina\", \"OpenEye\", ...)\n                \"output\": {\n                    \"receptor_path\": \"/workspaces/Auto-GPT/resources/tutorial/ADV_receptor.pdbqt\" // the generated receptor file will be saved to this location\n                },\n                \"parameters\": {\n                    \"pH\": 7.4, // # sets the protonation states (NOT used in Vina)\n                    \"extract_box\": { // in order to extract the coordinates of the pocket (see text)\n                        \"reference_ligand_path\": \"/workspaces/Auto-GPT/DockStreamCommunity/data/1UYD/PU8.pdb\", // path to the reference ligand\n                        \"reference_ligand_format\": \"PDB\" // format of the reference ligand\n                    }\n                }\n            }\n        ]\n    }\n}\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to update the setting json file to use the two PDBs I just created, protein apo pdb and ligand Z3N.pdb, and output the file as 8gcy_preparation_setting.json.\",\n        \"reasoning\": \"Updating the setting json file with the correct input paths will allow me to run target protein preparation with the created PDBs.\",\n        \"plan\": \"- Update the setting json file\\n- Write the updated setting json to 8gcy_preparation_setting.json\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now update the setting json file with the created PDBs and save it as 8gcy_preparation_setting.json.\"\n    },\n    \"command\": {\n        \"name\": \"write_to_file\",\n        \"args\": {\n            \"filename\": \"8gcy_preparation_setting.json\",\n            \"text\": \"{\\n    \\\"target_preparation\\\": {\\n        \\\"header\\\": {\\n            \\\"logging\\\": {\\n                \\\"logfile\\\": \\\"8gcy_target_prep.log\\\"\\n            }\\n        },\\n        \\\"input_path\\\": \\\"8gcy_apo.pdb\\\",\\n        \\\"fixer\\\": {\\n            \\\"enabled\\\": true,\\n            \\\"standardize\\\": true,\\n            \\\"remove_heterogens\\\": true,\\n            \\\"fix_missing_heavy_atoms\\\": true,\\n            \\\"fix_missing_hydrogens\\\": true,\\n            \\\"fix_missing_loops\\\": false,\\n            \\\"add_water_box\\\": false,\\n            \\\"fixed_pdb_path\\\": \\\"8gcy_fixed_target.pdb\\\"\\n        },\\n        \\\"runs\\\": [\\n            {\\n                \\\"backend\\\": \\\"AutoDockVina\\\",\\n                \\\"output\\\": {\\n                    \\\"receptor_path\\\": \\\"8gcy_receptor.pdbqt\\\"\\n                },\\n                \\\"parameters\\\": {\\n                    \\\"pH\\\": 7.4,\\n                    \\\"extract_box\\\": {\\n                        \\\"reference_ligand_path\\\": \\\"Z3N.pdb\\\",\\n                        \\\"reference_ligand_format\\\": \\\"PDB\\\"\\n                    }\\n                }\\n            }\\n        ]\\n    }\\n}\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command write_to_file returned: File written to successfully."
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    },
+    {
+        "role": "assistant",
+        "content": "{\n    \"thoughts\": {\n        \"text\": \"I need to run target protein preparation by using the Chemoinformatics plugin with 8gcy_preparation_setting.json.\",\n        \"reasoning\": \"Running target protein preparation will process the input PDBs according to the settings in the json file.\",\n        \"plan\": \"- Use target_protein_preparation with 8gcy_preparation_setting.json\",\n        \"criticism\": \"None\",\n        \"speak\": \"I will now run target protein preparation using the Chemoinformatics plugin with the 8gcy_preparation_setting.json file.\"\n    },\n    \"command\": {\n        \"name\": \"target_protein_preparation\",\n        \"args\": {\n            \"setting_json\": \"8gcy_preparation_setting.json\"\n        }\n    }\n}"
+    },
+    {
+        "role": "system",
+        "content": "Command target_protein_preparation returned: ('8gcy_receptor.pdbqt', '8gcy_target_prep.log')"
+    },
+    {
+        "role": "system",
+        "content": "Your remaining API budget is $2.617\n\n"
+    },
+    {
+        "role": "user",
+        "content": "Determine which next command to use, and respond using the format specified above:"
+    }
+]
+2023-06-03 15:28:48,716 INFO  THOUGHTS: I have completed the target protein preparation. Now, I should shut down.
+2023-06-03 15:28:49,064 INFO REASONING: All the tasks have been completed, and there is no further action required.
+2023-06-03 15:28:49,417 INFO PLAN: 
+2023-06-03 15:28:49,465 INFO -  Shutdown
+2023-06-03 15:28:49,578 INFO CRITICISM: None
+2023-06-03 15:28:49,640 DEBUG  {
+    "thoughts": {
+        "text": "I have completed the target protein preparation. Now, I should shut down.",
+        "reasoning": "All the tasks have been completed, and there is no further action required.",
+        "plan": "- Shutdown",
+        "criticism": "None",
+        "speak": "I have completed the target protein preparation. I will now shut down."
+    },
+    "command": {
+        "name": "task_complete",
+        "args": {
+            "reason": "All tasks completed"
+        }
+    }
+}
+2023-06-03 15:28:49,668 INFO NEXT ACTION:  COMMAND = task_complete  ARGUMENTS = {'reason': 'All tasks completed'}
+2023-06-03 15:28:49,927 INFO [36mAUTHORISED COMMANDS LEFT: [0m5 
+2023-06-03 15:28:50,027 INFO Shutting down...
+ All tasks completed
