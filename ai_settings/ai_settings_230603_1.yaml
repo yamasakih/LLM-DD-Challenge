@@ -1,0 +1,7 @@
+ai_goals:
+- Implement a Python script named smiles_from_sdf.py using RDKit to output the SMILES key of the chemical structure with IC50_range_nM tag "<100" (note that it is a string) from /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf to /workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.txt using RDKit.
+- Run smiles_from_sdf.py
+- Shutdown when task is done.
+ai_name: Hoshino AI
+ai_role: Medicinal Chemist and Chemoinformatician
+api_budget: 3.0

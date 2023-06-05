@@ -1,0 +1,7 @@
+ai_goals:
+- Read reinforcement_learning_setting.jsonc to know how to output setting json.
+- Update the reinforcement_learning_setting.jsonc file to use `/workspace/Auto-GPT/autogpt/auto_gpt_workspace/docking_setting.json` to configuration_path. Update the reinforcement_learning_setting.jsonc file to use "C[C@@H](Cc1nncn1C)c1cccc(-c2[nH]nc3c(CN4CC[C@H](F)C4)cc(C(F)(F)F)nc23)c1", "Cn1cnnc1CC1(c2cccc(NC(=O)N3CC4(CCNCC4)c4cccnc43)c2)COC1" and "C[C@H](Cc1nncn1C)c1cccc(NC(=O)N2CCOc3cccnc32)c1" SMILES keys to smiles. Output the file as reinforcement_learning_setting.json.
+- Shutdown when task is done.
+ai_name: Hoshino AI
+ai_role: Medicinal Chemist and Chemoinformatician
+api_budget: 3.0

@@ -1,0 +1,6 @@
+ai_goals:
+- compare smiles (/workspace/Auto-GPT/autogpt/auto_gpt_workspace/results/scaffold_memory.csv) and with sdf (/workspace/Auto-GPT/autogpt/auto_gpt_workspace/CBLB_inhibitors_vsF.sdf) by using the Chemoinformatics plugin respectively. Output result to comapre_result.csv.
+- Shutdown when task is done.
+ai_name: Hoshino AI
+ai_role: Medicinal Chemist and Chemoinformatician
+api_budget: 3.0

@@ -1,0 +1,6 @@
+ai_goals:
+- Run run reinvent with docking by using the Chemoinformatics plugin with /workspace/Auto-GPT/autogpt/auto_gpt_workspace/reinforcement_learning_setting.json
+- Shutdown when task is done.
+ai_name: Hoshino AI
+ai_role: Medicinal Chemist and Chemoinformatician
+api_budget: 3.0
